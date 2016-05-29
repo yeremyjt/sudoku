@@ -9,11 +9,11 @@ public class Column
 
     public List<Cell> getColumn()
     {
-        return column;
+        return new ArrayList<>(column);
     }
 
     public void setColumn(List<Cell> column)
     {
-        this.column = column;
+        this.column.addAll(column);
     }
 }

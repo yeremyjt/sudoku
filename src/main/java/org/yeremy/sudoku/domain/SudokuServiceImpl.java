@@ -24,5 +24,4 @@ public class SudokuServiceImpl implements SudokuService
         final Board boardAfterFindingPossibilities = findPossibilitiesStrategy.solve(board);
         return removePossibilitiesStrategy.solve(boardAfterFindingPossibilities);
     }
-
 }

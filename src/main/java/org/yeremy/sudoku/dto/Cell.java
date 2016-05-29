@@ -2,20 +2,24 @@ package org.yeremy.sudoku.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Cell
 {
-    private String solution;
+    @JsonProperty("value")
+    private String value;
 
+    @JsonProperty("posibilities")
     private List<String> posibilities;
 
-    public String getSolution()
+    public String getValue()
     {
-        return solution;
+        return this.value;
     }
 
-    public void setSolution(String solution)
+    public void setValue(String value)
     {
-        this.solution = solution;
+        this.value = value;
     }
 
     public List<String> getPosibilities()

@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
@@ -20,6 +21,20 @@ public class SpringConfiguration
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                .pathMapping("/");
+                .pathMapping("/")
+                .apiInfo(apiInfo());
     }
+
+    private ApiInfo apiInfo()
+    {
+        final ApiInfo apiInfo = new ApiInfo(
+                "Sudoku Service REST API",
+                "Yeremy's Sudoku Service.",
+                "1",
+                "yeremyturcios@gmai.com",
+                "API License",
+                "API License URL", null);
+        return apiInfo;
+    }
+
 }

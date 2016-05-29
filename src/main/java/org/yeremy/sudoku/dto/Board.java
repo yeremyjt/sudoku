@@ -1,18 +1,25 @@
 package org.yeremy.sudoku.dto;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Board
 {
-    private Cell[][] board;
-    private int n;
+    @JsonProperty("cells")
+    private List<List<Cell>> cells;
 
-    public Cell[][] getBoard()
+    @JsonProperty("solved")
+    private boolean solved;
+
+    public List<List<Cell>> getCells()
     {
-        return board;
+        return this.cells;
     }
 
-    public void setBoard(Cell[][] board)
+    public void setCells(List<List<Cell>> cells)
     {
-        copyBoard(this.board, board);
+        this.cells = cells;
     }
 
     private void copyBoard(Cell[][] thisBoard, Cell[][] thatBoard)
@@ -25,6 +32,16 @@ public class Board
             }
         }
 
+    }
+
+    public boolean isSolved()
+    {
+        return solved;
+    }
+
+    public void setSolved(boolean solved)
+    {
+        this.solved = solved;
     }
 
 }
