@@ -18,10 +18,46 @@ public class SudokuServiceImpl implements SudokuService
     @Named("removePossibilitiesStrategy")
     private Strategy removePossibilitiesStrategy;
 
+    @Inject
+    @Named("processOfElimininationStrategy")
+    private Strategy processOfEliminationStrategy;
+
     @Override
-    public Board solve(Board board)
+    public Board solve(Board inputBoard)
     {
-        final Board boardAfterFindingPossibilities = findPossibilitiesStrategy.solve(board);
-        return removePossibilitiesStrategy.solve(boardAfterFindingPossibilities);
+        Board outputBoard = findPossibilitiesStrategy.solve(inputBoard);
+
+        if (outputBoard.isSolved())
+        {
+            return outputBoard;
+        }
+
+        outputBoard = removePossibilitiesStrategy.solve(outputBoard);
+
+        if (outputBoard.isSolved())
+        {
+            return outputBoard;
+        }
+
+        outputBoard = processOfEliminationStrategy.solve(outputBoard);
+
+        if (outputBoard.isSolved())
+        {
+            return outputBoard;
+        }
+
+        while (!outputBoard.isSolved())
+        {
+            outputBoard = removePossibilitiesStrategy.solve(outputBoard);
+
+            if (outputBoard.isSolved())
+            {
+                return outputBoard;
+            }
+
+            outputBoard = processOfEliminationStrategy.solve(outputBoard);
+        }
+
+        return outputBoard;
     }
 }

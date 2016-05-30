@@ -11,7 +11,6 @@ public class Board
 
     @JsonProperty("solved")
     private boolean solved;
-
     public List<List<Cell>> getCells()
     {
         return this.cells;
@@ -42,6 +41,22 @@ public class Board
     public void setSolved(boolean solved)
     {
         this.solved = solved;
+    }
+
+    public Cell[][] toCellMatrix()
+    {
+        final int n = cells.get(0).size();
+        final Cell[][] cellMatrix = new Cell[n][n];
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                cellMatrix[i][j] = cells.get(i).get(j);
+            }
+        }
+
+        return cellMatrix;
     }
 
 }
