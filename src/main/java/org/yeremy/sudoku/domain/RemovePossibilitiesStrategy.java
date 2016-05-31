@@ -1,5 +1,7 @@
 package org.yeremy.sudoku.domain;
 
+import java.util.List;
+
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -18,7 +20,7 @@ public class RemovePossibilitiesStrategy implements Strategy
 {
 
     @Override
-    public Board solve(Board board)
+    public Board solve(Board board, List<String> characters)
     {
         return new Board();
     }

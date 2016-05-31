@@ -1,5 +1,8 @@
 package org.yeremy.sudoku.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.boot.SpringApplication;
@@ -37,7 +40,7 @@ public class SudokuController
         return "Hello World!";
     }
 
-    @RequestMapping(value = "solve", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+    @RequestMapping(value = "solve/9by9", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "board", value = "Sudoku Board", required = true, dataType = "Board")
     })
@@ -50,7 +53,21 @@ public class SudokuController
     @ResponseBody
     public Board solveSudoku(@RequestBody Board board)
     {
-        return sudokuService.solve(board);
+        final List<String> characters = new ArrayList<String>()
+        {
+            {
+                add("1");
+                add("2");
+                add("3");
+                add("4");
+                add("5");
+                add("6");
+                add("7");
+                add("8");
+                add("9");
+            }
+        };
+        return sudokuService.solve(board, characters);
     }
 
     public static void main(String[] args)

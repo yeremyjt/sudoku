@@ -1,5 +1,7 @@
 package org.yeremy.sudoku.domain;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -23,23 +25,23 @@ public class SudokuServiceImpl implements SudokuService
     private Strategy processOfEliminationStrategy;
 
     @Override
-    public Board solve(Board inputBoard)
+    public Board solve(Board inputBoard, List<String> characters)
     {
-        Board outputBoard = findPossibilitiesStrategy.solve(inputBoard);
+        Board outputBoard = findPossibilitiesStrategy.solve(inputBoard, characters);
 
         if (outputBoard.isSolved())
         {
             return outputBoard;
         }
 
-        outputBoard = removePossibilitiesStrategy.solve(outputBoard);
+        outputBoard = removePossibilitiesStrategy.solve(outputBoard, characters);
 
         if (outputBoard.isSolved())
         {
             return outputBoard;
         }
 
-        outputBoard = processOfEliminationStrategy.solve(outputBoard);
+        outputBoard = processOfEliminationStrategy.solve(outputBoard, characters);
 
         if (outputBoard.isSolved())
         {
@@ -48,14 +50,14 @@ public class SudokuServiceImpl implements SudokuService
 
         while (!outputBoard.isSolved())
         {
-            outputBoard = removePossibilitiesStrategy.solve(outputBoard);
+            outputBoard = removePossibilitiesStrategy.solve(outputBoard, characters);
 
             if (outputBoard.isSolved())
             {
                 return outputBoard;
             }
 
-            outputBoard = processOfEliminationStrategy.solve(outputBoard);
+            outputBoard = processOfEliminationStrategy.solve(outputBoard, characters);
         }
 
         return outputBoard;

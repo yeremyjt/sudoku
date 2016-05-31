@@ -9,8 +9,8 @@ public class Cell
     @JsonProperty("value")
     private String value;
 
-    @JsonProperty("posibilities")
-    private List<String> posibilities;
+    @JsonProperty("possibilities")
+    private List<String> possibilities;
 
     public String getValue()
     {
@@ -22,14 +22,14 @@ public class Cell
         this.value = value;
     }
 
-    public List<String> getPosibilities()
+    public List<String> getPossibilities()
     {
-        return posibilities;
+        return possibilities;
     }
 
     public void setPosibilities(List<String> posibilities)
     {
-        this.posibilities = posibilities;
+        this.possibilities = posibilities;
     }
 
 }
