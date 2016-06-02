@@ -25,41 +25,41 @@ public class SudokuServiceImpl implements SudokuService
     private Strategy processOfEliminationStrategy;
 
     @Override
-    public Board solve(Board inputBoard, List<String> characters)
+    public Board solve(Board board, List<String> characters)
     {
-        Board outputBoard = findPossibilitiesStrategy.solve(inputBoard, characters);
+        findPossibilitiesStrategy.solve(board, characters);
 
-        if (outputBoard.isSolved())
+        if (board.isSolved())
         {
-            return outputBoard;
+            return board;
         }
 
-        outputBoard = removePossibilitiesStrategy.solve(outputBoard, characters);
+        removePossibilitiesStrategy.solve(board, characters);
 
-        if (outputBoard.isSolved())
+        if (board.isSolved())
         {
-            return outputBoard;
+            return board;
         }
 
-        outputBoard = processOfEliminationStrategy.solve(outputBoard, characters);
+        processOfEliminationStrategy.solve(board, characters);
 
-        if (outputBoard.isSolved())
+        if (board.isSolved())
         {
-            return outputBoard;
+            return board;
         }
 
-        while (!outputBoard.isSolved())
+        while (!board.isSolved())
         {
-            outputBoard = removePossibilitiesStrategy.solve(outputBoard, characters);
+            removePossibilitiesStrategy.solve(board, characters);
 
-            if (outputBoard.isSolved())
+            if (board.isSolved())
             {
-                return outputBoard;
+                return board;
             }
 
-            outputBoard = processOfEliminationStrategy.solve(outputBoard, characters);
+            processOfEliminationStrategy.solve(board, characters);
         }
 
-        return outputBoard;
+        return board;
     }
 }

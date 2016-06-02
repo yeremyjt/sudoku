@@ -1,5 +1,6 @@
 package org.yeremy.sudoku.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,7 +30,12 @@ public class Cell
 
     public void setPosibilities(List<String> posibilities)
     {
-        this.possibilities = posibilities;
+        this.possibilities = new ArrayList<String>(posibilities);
+    }
+
+    public void clearPossibilities()
+    {
+        this.possibilities.clear();
     }
 
 }

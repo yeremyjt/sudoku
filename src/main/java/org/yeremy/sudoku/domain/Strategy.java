@@ -6,5 +6,5 @@ import org.yeremy.sudoku.dto.Board;
 
 public interface Strategy
 {
-    Board solve(Board board, List<String> characters);
+    void solve(Board board, List<String> characters);
 }

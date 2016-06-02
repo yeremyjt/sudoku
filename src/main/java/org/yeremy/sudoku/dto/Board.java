@@ -1,24 +1,23 @@
 package org.yeremy.sudoku.dto;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Board
 {
-    @JsonProperty("cells")
-    private List<List<Cell>> cells;
+    @JsonProperty("matrix")
+    private Cell[][] matrix;
 
     @JsonProperty("solved")
     private boolean solved;
-    public List<List<Cell>> getCells()
+
+    public Cell[][] getMatrix()
     {
-        return this.cells;
+        return this.matrix;
     }
 
-    public void setCells(List<List<Cell>> cells)
+    public void setMatrix(Cell[][] matrix)
     {
-        this.cells = cells;
+        this.matrix = matrix;
     }
 
     private void copyBoard(Cell[][] thisBoard, Cell[][] thatBoard)
@@ -43,20 +42,20 @@ public class Board
         this.solved = solved;
     }
 
-    public Cell[][] toCellMatrix()
-    {
-        final int n = cells.get(0).size();
-        final Cell[][] cellMatrix = new Cell[n][n];
-
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                cellMatrix[i][j] = cells.get(i).get(j);
-            }
-        }
-
-        return cellMatrix;
-    }
+    // public Cell[][] toCellMatrix()
+    // {
+    // final int n = cells.get(0).size();
+    // final Cell[][] cellMatrix = new Cell[n][n];
+    //
+    // for (int i = 0; i < n; i++)
+    // {
+    // for (int j = 0; j < n; j++)
+    // {
+    // cellMatrix[i][j] = cells.get(i).get(j);
+    // }
+    // }
+    //
+    // return cellMatrix;
+    // }
 
 }

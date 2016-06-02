@@ -40,7 +40,7 @@ public class SudokuController
         return "Hello World!";
     }
 
-    @RequestMapping(value = "solve/9by9", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+    @RequestMapping(value = "solve", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "board", value = "Sudoku Board", required = true, dataType = "Board")
     })

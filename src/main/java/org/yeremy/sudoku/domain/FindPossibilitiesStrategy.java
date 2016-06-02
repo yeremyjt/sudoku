@@ -3,6 +3,7 @@ package org.yeremy.sudoku.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -21,16 +22,22 @@ import org.yeremy.sudoku.dto.Cell;
 public class FindPossibilitiesStrategy implements Strategy
 {
 
+    @Inject
+    @Named("searchValue")
+    Search search;
+
     private Cell[][] matrix;
 
     private int n;
 
     @Override
-    public Board solve(Board board, List<String> characters)
+    public void solve(Board board, List<String> characters)
     {
-        n = board.getCells().get(0).size();
+        matrix = board.getMatrix();
 
-        matrix = board.toCellMatrix();
+        n = matrix[0].length;
+
+        int answerCount = 0;
 
         for (int row = 0; row < n; row++)
         {
@@ -43,96 +50,37 @@ public class FindPossibilitiesStrategy implements Strategy
                     // Loop through the list of characters
                     for (final String character : characters)
                     {
-                        if (!searchInRow(character, row) && !searchInColumn(character, column)
-                                && !searchInBox(character, row, column))
+                        if (search.searchInRow(matrix, n, character, row) == -1
+                                && search.searchInColumn(matrix, n, character, column) == -1
+                                && search.searchInBox(matrix, n, character, row, column) == null)
                         {
                             possibilities.add(character);
                         }
                     }
 
+                    // If there is only one possibility, that's the answer for that cell.
+                    if (possibilities.size() == 1)
+                    {
+                        matrix[row][column].setValue(possibilities.get(0));
+                        matrix[row][column].clearPossibilities();
+                        answerCount++;
+                    }
+
                     matrix[row][column].setPosibilities(possibilities);
                 }
-            }
-        }
-
-        return new Board();
-    }
-
-    private boolean searchInBox(String character, int row, int column)
-    {
-        final int boxSize = (int) Math.sqrt(n);
-
-        int boxUpperRow = -1;
-        int boxLowerRow = -1;
-        int boxLeftColumn = -1;
-        int boxRightColumn = -1;
-
-        // Finding boxUpperRow and boxLowerRow
-        for (int x = 0; x <= n; x += boxSize)
-        {
-            final int upperRow = x;
-            final int lowerRow = x + boxSize - 1;
-
-            if (row >= upperRow && row <= lowerRow)
-            {
-                boxUpperRow = upperRow;
-                boxLowerRow = lowerRow;
-                break;
-            }
-        }
-
-        // Finding boxLeftColumn and boxRightColumn
-        for (int x = 0; x <= n; x += boxSize)
-        {
-            final int leftColumn = x;
-            final int rightColumn = x + boxSize - 1;
-
-            if (row >= leftColumn && row <= rightColumn)
-            {
-                boxLeftColumn = leftColumn;
-                boxRightColumn = rightColumn;
-                break;
-            }
-        }
-
-        // Search in the box
-        for (int i = boxUpperRow; i <= boxLowerRow; i++)
-        {
-            for (int j = boxLeftColumn; j <= boxRightColumn; j++)
-            {
-                if (matrix[i][j].getValue().equals(character))
+                // Solution has been found for this cell
+                else
                 {
-                    return true;
+                    answerCount++;
                 }
             }
         }
 
-        return false;
-    }
+        board.setMatrix(matrix);
 
-    private boolean searchInColumn(String character, int column)
-    {
-        for (int row = 0; row < n; row++)
+        if (answerCount == n * n)
         {
-            if (matrix[row][column].getValue().equals(character))
-            {
-                return true;
-            }
+            board.setSolved(true);
         }
-        return false;
     }
-
-    private boolean searchInRow(String character, int row)
-    {
-        for (int column = 0; column < n; column++)
-        {
-            if (matrix[row][column].getValue().equals(character))
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
 }

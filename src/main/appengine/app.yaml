@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # [END_EXCLUDE]
-runtime: custom
+runtime: java
 vm: true
 
 runtime_config:  # Optional
