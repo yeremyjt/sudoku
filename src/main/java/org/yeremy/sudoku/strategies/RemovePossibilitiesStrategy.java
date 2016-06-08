@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.strategies;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 
 import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.Cell;
+import org.yeremy.sudoku.search.Search;
 
 /**
  * This is the second strategy. After the FindPossibilitiesStrategy has ran, this removes possible solutios in cells
@@ -37,6 +38,8 @@ public class RemovePossibilitiesStrategy implements Strategy
 
         int answerCount = 0;
 
+        board.setHasChanged(false);
+
         for (int row = 0; row < n; row++)
         {
             for (int column = 0; column < n; column++)
@@ -62,6 +65,12 @@ public class RemovePossibilitiesStrategy implements Strategy
                         matrix[row][column].setValue(possibilities.get(0));
                         matrix[row][column].clearPossibilities();
                         answerCount++;
+
+                        // If there was at least one cell solved, the board has changed.
+                        if (answerCount == 1)
+                        {
+                            board.setHasChanged(true);
+                        }
                     }
                 }
                 else

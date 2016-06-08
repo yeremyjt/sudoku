@@ -7,6 +7,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import org.yeremy.sudoku.dto.Board;
+import org.yeremy.sudoku.strategies.Strategy;
 
 @Named
 @Singleton
@@ -48,7 +49,7 @@ public class SudokuServiceImpl implements SudokuService
             return board;
         }
 
-        while (!board.isSolved())
+        while (!board.isSolved() && board.isHasChanged())
         {
             removePossibilitiesStrategy.solve(board, characters);
 

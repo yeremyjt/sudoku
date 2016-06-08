@@ -19,6 +19,7 @@ import org.yeremy.sudoku.dto.Board;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -51,7 +52,7 @@ public class SudokuController
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Failure") })
     @ResponseBody
-    public Board solveSudoku(@RequestBody Board board)
+    public Board solveSudoku(@RequestBody @ApiParam Board board)
     {
         final List<String> characters = new ArrayList<String>()
         {

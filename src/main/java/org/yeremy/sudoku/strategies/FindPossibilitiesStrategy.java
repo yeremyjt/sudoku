@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 
 import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.Cell;
+import org.yeremy.sudoku.search.Search;
 
 /**
  * This is the first strategy. It cycles through the sudoku board and markes all the possible solutions for each cell in
@@ -39,6 +40,8 @@ public class FindPossibilitiesStrategy implements Strategy
 
         int answerCount = 0;
 
+        board.setHasChanged(false);
+
         for (int row = 0; row < n; row++)
         {
             for (int column = 0; column < n; column++)
@@ -64,6 +67,12 @@ public class FindPossibilitiesStrategy implements Strategy
                         matrix[row][column].setValue(possibilities.get(0));
                         matrix[row][column].clearPossibilities();
                         answerCount++;
+
+                        // If there was at least one cell solved, the board has changed.
+                        if (answerCount == 1)
+                        {
+                            board.setHasChanged(true);
+                        }
                     }
 
                     matrix[row][column].setPosibilities(possibilities);

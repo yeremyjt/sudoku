@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.search;
 
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.Coordinate;

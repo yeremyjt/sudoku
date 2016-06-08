@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.strategies;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.Coordinate;
+import org.yeremy.sudoku.search.Search;
 
 /**
  * This is the third strategy. It uses process of elimination to find solutions to cells. For example, if a row only has
@@ -35,6 +36,8 @@ public class ProcessOfEliminationStrategy implements Strategy
 
         n = matrix[0].length;
 
+        board.setHasChanged(false);
+
         // Search all rows
         for (int row = 0; row < n; row++)
         {
@@ -46,6 +49,7 @@ public class ProcessOfEliminationStrategy implements Strategy
                 {
                     matrix[row][column].setValue(character);
                     matrix[row][column].clearPossibilities();
+                    board.setHasChanged(true);
                 }
             }
         }
@@ -61,6 +65,8 @@ public class ProcessOfEliminationStrategy implements Strategy
                 {
                     matrix[row][column].setValue(character);
                     matrix[row][column].clearPossibilities();
+                    board.setHasChanged(true);
+
                 }
             }
         }
@@ -79,6 +85,7 @@ public class ProcessOfEliminationStrategy implements Strategy
                     {
                         matrix[coordinate.getRow()][coordinate.getColumn()].setValue(character);
                         matrix[coordinate.getRow()][coordinate.getColumn()].clearPossibilities();
+                        board.setHasChanged(true);
                     }
                 }
             }

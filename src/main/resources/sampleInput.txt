@@ -1,5 +1,5 @@
 {
-	"cells": [
+	"matrix": [
 		[{
 			"value": "1",
 			"posibilities": []
@@ -253,5 +253,6 @@
 			"posibilities": []
 		}]
 	],
-	"solved": false
+	"solved": false,
+	"hasChanged": false
 }

@@ -1,9 +1,14 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.search;
+
+import javax.inject.Named;
+import javax.inject.Singleton;
 
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.Coordinate;
 
-public class SearchPossibility implements Search
+@Named("searchValue")
+@Singleton
+public class SearchValue implements Search
 {
 
     @Override
@@ -49,34 +54,17 @@ public class SearchPossibility implements Search
         }
 
         // Search in the box
-        int counter = 0;
         for (int i = boxUpperRow; i <= boxLowerRow; i++)
         {
             for (int j = boxLeftColumn; j <= boxRightColumn; j++)
             {
-                // Solution has been found for this character in this box
-                if (matrix[i][j].getValue().equals("0"))
+                if (matrix[i][j].getValue().equals(character))
                 {
-                    return null;
-                }
-
-                if (matrix[i][j].getPossibilities().contains(character))
-                {
-                    counter++;
                     coordinate.setRow(i);
                     coordinate.setColumn(j);
-
-                    if (counter > 1)
-                    {
-                        return null;
-                    }
+                    return coordinate;
                 }
             }
-        }
-
-        if (counter == 1)
-        {
-            return coordinate;
         }
 
         return null;
@@ -86,68 +74,26 @@ public class SearchPossibility implements Search
     @Override
     public int searchInColumn(Cell[][] matrix, int n, String character, int column)
     {
-        int counter = 0;
-        int rowToReturn = -1;
-
         for (int row = 0; row < n; row++)
         {
-            // Solution has been found
-            if (matrix[row][column].getValue().equals("0"))
+            if (matrix[row][column].getValue().equals(character))
             {
-                return -1;
-            }
-
-            if (matrix[row][column].getPossibilities().contains(character))
-            {
-                counter++;
-                rowToReturn = column;
-
-                if (counter > 1)
-                {
-                    return -1;
-                }
+                return row;
             }
         }
-
-        if (counter == 1)
-        {
-            return rowToReturn;
-        }
-
         return -1;
     }
 
     @Override
     public int searchInRow(Cell[][] matrix, int n, String character, int row)
     {
-        int counter = 0;
-        int columnToReturn = -1;
-
         for (int column = 0; column < n; column++)
         {
-            // Solution has been found
-            if (matrix[row][column].getValue().equals("0"))
+            if (matrix[row][column].getValue().equals(character))
             {
-                return -1;
-            }
-
-            if (matrix[row][column].getPossibilities().contains(character))
-            {
-                counter++;
-                columnToReturn = column;
+                return column;
             }
         }
-
-        if (counter > 1)
-        {
-            return -1;
-        }
-
-        if (counter == 1)
-        {
-            return columnToReturn;
-        }
-
         return -1;
     }
 

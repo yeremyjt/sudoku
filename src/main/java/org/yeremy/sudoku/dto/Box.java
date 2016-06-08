@@ -1,3 +1,4 @@
+
 package org.yeremy.sudoku.dto;
 
 import java.util.ArrayList;

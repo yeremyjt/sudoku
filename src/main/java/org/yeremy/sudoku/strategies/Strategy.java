@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.domain;
+package org.yeremy.sudoku.strategies;
 
 import java.util.List;
 

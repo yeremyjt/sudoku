@@ -10,6 +10,9 @@ public class Board
     @JsonProperty("solved")
     private boolean solved;
 
+    @JsonProperty("hasChanged")
+    boolean hasChanged;
+
     public Cell[][] getMatrix()
     {
         return this.matrix;
@@ -35,6 +38,16 @@ public class Board
     public boolean isSolved()
     {
         return solved;
+    }
+
+    public boolean isHasChanged()
+    {
+        return hasChanged;
+    }
+
+    public void setHasChanged(boolean hasChanged)
+    {
+        this.hasChanged = hasChanged;
     }
 
     public void setSolved(boolean solved)
