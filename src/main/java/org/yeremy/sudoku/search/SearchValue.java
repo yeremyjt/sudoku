@@ -14,9 +14,7 @@ public class SearchValue implements Search
     @Override
     public Coordinate searchInBox(Cell[][] matrix, int n, String character, int row, int column)
     {
-        final Coordinate coordinate = new Coordinate();
-        coordinate.setColumn(-1);
-        coordinate.setRow(-1);
+        final Coordinate coordinate = new Coordinate(-1, -1);
 
         final int boxSize = (int) Math.sqrt(n);
 

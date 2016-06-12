@@ -26,4 +26,31 @@ public class Coordinate
         this.column = column;
     }
 
+    public Coordinate(int row, int column)
+    {
+        this.row = row;
+        this.column = column;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof Coordinate)
+        {
+            final Coordinate c = (Coordinate) obj;
+
+            if (this.row == c.getRow() && this.column == c.getColumn())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

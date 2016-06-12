@@ -1,4 +1,4 @@
-package org.yeremy.controller;
+package org.yeremy.sudoku.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
