@@ -43,7 +43,7 @@ public class SearchValue implements Search
             final int leftColumn = x;
             final int rightColumn = x + boxSize - 1;
 
-            if (row >= leftColumn && row <= rightColumn)
+            if (column >= leftColumn && column <= rightColumn)
             {
                 boxLeftColumn = leftColumn;
                 boxRightColumn = rightColumn;
@@ -66,7 +66,6 @@ public class SearchValue implements Search
         }
 
         return null;
-
     }
 
     @Override

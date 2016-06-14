@@ -108,9 +108,29 @@ public class SearchValueTest
         expected = new Coordinate(5, 5);
         Assert.assertEquals(expected, actual);
 
+        character = "8";
+        actual = search.searchInBox(board.getMatrix(), n, character, 3, 0);
+        expected = new Coordinate(4, 0);
+        Assert.assertEquals(expected, actual);
+
         character = "5";
         actual = search.searchInBox(board.getMatrix(), n, character, 3, 0);
         expected = new Coordinate(5, 0);
+        Assert.assertEquals(expected, actual);
+
+        character = "2";
+        actual = search.searchInBox(board.getMatrix(), n, character, 7, 2);
+        expected = new Coordinate(8, 2);
+        Assert.assertEquals(expected, actual);
+
+        character = "3";
+        actual = search.searchInBox(board.getMatrix(), n, character, 5, 5);
+        expected = new Coordinate(5, 3);
+        Assert.assertEquals(expected, actual);
+
+        character = "3";
+        actual = search.searchInBox(board.getMatrix(), n, character, 6, 6);
+        expected = null;
         Assert.assertEquals(expected, actual);
 
 
