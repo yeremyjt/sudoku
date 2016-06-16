@@ -25,7 +25,7 @@ public class SearchValueTest
     {
         final ObjectMapper objectMapper = new ObjectMapper();
         final InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("searchValueTest_input.txt");
+                .getResourceAsStream("boardWithValues.txt");
         try
         {
             board = objectMapper.readValue(inputStream, Board.class);
@@ -132,8 +132,6 @@ public class SearchValueTest
         actual = search.searchInBox(board.getMatrix(), n, character, 6, 6);
         expected = null;
         Assert.assertEquals(expected, actual);
-
-
     }
 
 }

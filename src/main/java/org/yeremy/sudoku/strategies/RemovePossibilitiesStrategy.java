@@ -11,7 +11,7 @@ import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.search.Search;
 
 /**
- * This is the second strategy. After the FindPossibilitiesStrategy has ran, this removes possible solutios in cells
+ * This is the second strategy. After the FindPossibilitiesStrategy has ran, this removes possible solutions in cells
  * that are no longer possible because and answer has been found in a different cell on a given row, column, or box.
  *
  * @author yeremy

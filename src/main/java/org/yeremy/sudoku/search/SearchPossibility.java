@@ -38,7 +38,7 @@ public class SearchPossibility implements Search
             final int leftColumn = x;
             final int rightColumn = x + boxSize - 1;
 
-            if (row >= leftColumn && row <= rightColumn)
+            if (column >= leftColumn && column <= rightColumn)
             {
                 boxLeftColumn = leftColumn;
                 boxRightColumn = rightColumn;
@@ -52,12 +52,6 @@ public class SearchPossibility implements Search
         {
             for (int j = boxLeftColumn; j <= boxRightColumn; j++)
             {
-                // Solution has been found for this character in this box
-                if (matrix[i][j].getValue().equals("0"))
-                {
-                    return null;
-                }
-
                 if (matrix[i][j].getPossibilities().contains(character))
                 {
                     counter++;
@@ -89,16 +83,10 @@ public class SearchPossibility implements Search
 
         for (int row = 0; row < n; row++)
         {
-            // Solution has been found
-            if (matrix[row][column].getValue().equals("0"))
-            {
-                return -1;
-            }
-
             if (matrix[row][column].getPossibilities().contains(character))
             {
                 counter++;
-                rowToReturn = column;
+                rowToReturn = row;
 
                 if (counter > 1)
                 {
@@ -123,22 +111,16 @@ public class SearchPossibility implements Search
 
         for (int column = 0; column < n; column++)
         {
-            // Solution has been found
-            if (matrix[row][column].getValue().equals("0"))
-            {
-                return -1;
-            }
-
             if (matrix[row][column].getPossibilities().contains(character))
             {
                 counter++;
                 columnToReturn = column;
-            }
-        }
 
-        if (counter > 1)
-        {
-            return -1;
+                if (counter > 1)
+                {
+                    return -1;
+                }
+            }
         }
 
         if (counter == 1)
