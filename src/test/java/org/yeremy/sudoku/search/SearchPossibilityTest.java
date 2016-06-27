@@ -101,7 +101,7 @@ public class SearchPossibilityTest
 
         character = "3";
         actual = search.searchInColumn(board.getMatrix(), n, character, 8);
-        Assert.assertEquals(-1, actual);
+        Assert.assertEquals(8, actual);
     }
 
     @Test

@@ -2,255 +2,255 @@
 	"matrix": [
 		[{
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "7",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "5",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "6",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "3",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "9",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "2",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "5",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "2",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "8",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "6",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "4",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "1",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "6",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "2",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "8",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "2",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "3",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "7",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "5",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "3",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "8",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "6",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "7",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "9",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "4",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "9",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "4",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "3",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}],
 		[{
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "2",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "8",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "9",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "7",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}, {
 			"value": "0",
-			"posibilities": []
+			"possibilities": []
 		}]
 	],
 	"solved": false,

@@ -38,4 +38,41 @@ public class Cell
         this.possibilities.clear();
     }
 
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof Cell)
+        {
+            final Cell that = (Cell) obj;
+
+            if (this.value.equals(that.value))
+            {
+                if (this.possibilities.size() == that.possibilities.size())
+                {
+                    for (int i = 0; i < this.possibilities.size(); i++)
+                    {
+                        if (!this.possibilities.contains(that.possibilities.get(i)))
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+
+        return true;
+    }
+
 }

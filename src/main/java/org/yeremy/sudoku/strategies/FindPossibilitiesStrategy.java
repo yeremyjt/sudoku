@@ -46,11 +46,19 @@ public class FindPossibilitiesStrategy implements Strategy
         {
             for (int column = 0; column < n; column++)
             {
-                // If solution has not already been found.
-                if (!matrix[row][column].getValue().equals("0"))
+
+                if (row == 2 && column == 4)
+                {
+                    System.out.println(row);
+                }
+
+                // If solution has not been found.
+                if (matrix[row][column].getValue().equals("0"))
                 {
                     final List<String> possibilities = new ArrayList<>();
-                    // Loop through the list of characters
+
+                    // Loop through the list of characters. If character is not found in row, column, and box, add it to
+                    // the list of possibilities
                     for (final String character : characters)
                     {
                         if (search.searchInRow(matrix, n, character, row) == -1
@@ -68,11 +76,8 @@ public class FindPossibilitiesStrategy implements Strategy
                         matrix[row][column].clearPossibilities();
                         answerCount++;
 
-                        // If there was at least one cell solved, the board has changed.
-                        if (answerCount == 1)
-                        {
-                            board.setHasChanged(true);
-                        }
+                        board.setHasChanged(true);
+                        continue;
                     }
 
                     matrix[row][column].setPosibilities(possibilities);
