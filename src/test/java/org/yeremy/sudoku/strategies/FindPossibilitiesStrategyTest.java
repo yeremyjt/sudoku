@@ -172,6 +172,8 @@ public class FindPossibilitiesStrategyTest
         assertEquals(expectedBoard.getMatrix()[8][6], inputBoard.getMatrix()[8][6]);
         assertEquals(expectedBoard.getMatrix()[8][7], inputBoard.getMatrix()[8][7]);
         assertEquals(expectedBoard.getMatrix()[8][8], inputBoard.getMatrix()[8][8]);
+
+        assertEquals(expectedBoard, inputBoard);
     }
 
 }

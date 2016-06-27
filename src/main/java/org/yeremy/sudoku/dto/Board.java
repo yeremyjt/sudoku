@@ -72,7 +72,7 @@ public class Board
                         {
                             for (int j = 0; j < this.matrix[0].length; j++)
                             {
-                                if (this.matrix[i][j].equals(that.matrix[i][j]))
+                                if (!this.matrix[i][j].equals(that.matrix[i][j]))
                                 {
                                     return false;
                                 }
