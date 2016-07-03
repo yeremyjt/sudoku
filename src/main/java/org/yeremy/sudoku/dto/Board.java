@@ -97,21 +97,4 @@ public class Board
 
         return true;
     }
-
-    // public Cell[][] toCellMatrix()
-    // {
-    // final int n = cells.get(0).size();
-    // final Cell[][] cellMatrix = new Cell[n][n];
-    //
-    // for (int i = 0; i < n; i++)
-    // {
-    // for (int j = 0; j < n; j++)
-    // {
-    // cellMatrix[i][j] = cells.get(i).get(j);
-    // }
-    // }
-    //
-    // return cellMatrix;
-    // }
-
 }

@@ -53,7 +53,7 @@ public class FindPossibilitiesStrategyTest
     {
         final ObjectMapper objectMapper = new ObjectMapper();
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("boardWithValues.txt");
+                .getResourceAsStream("inputBoard.txt");
         try
         {
             inputBoard = objectMapper.readValue(inputStream, Board.class);
@@ -64,7 +64,7 @@ public class FindPossibilitiesStrategyTest
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("boardWithPossibilities.txt");
+                .getResourceAsStream("boardAfterFirstStrategy.txt");
         try
         {
             expectedBoard = objectMapper.readValue(inputStream, Board.class);
