@@ -25,7 +25,7 @@ public class SearchValueTest
     {
         final ObjectMapper objectMapper = new ObjectMapper();
         final InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("inputBoard.txt");
+                .getResourceAsStream("input-board.txt");
         try
         {
             board = objectMapper.readValue(inputStream, Board.class);
