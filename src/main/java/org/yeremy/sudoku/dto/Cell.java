@@ -28,14 +28,22 @@ public class Cell
         return possibilities;
     }
 
-    public void setPosibilities(List<String> posibilities)
+    public void setPossibilities(List<String> possibilities)
     {
-        this.possibilities = new ArrayList<String>(posibilities);
+        this.possibilities = new ArrayList<String>(possibilities);
     }
 
     public void clearPossibilities()
     {
         this.possibilities.clear();
+    }
+
+    public void deletePossibilities(List<String> possibilitiesToRemove)
+    {
+        for (final String possibility : possibilitiesToRemove)
+        {
+            this.possibilities.remove(possibility);
+        }
     }
 
     @Override

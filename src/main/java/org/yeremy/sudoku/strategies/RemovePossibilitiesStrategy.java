@@ -1,5 +1,6 @@
 package org.yeremy.sudoku.strategies;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -44,10 +45,17 @@ public class RemovePossibilitiesStrategy implements Strategy
         {
             for (int column = 0; column < n; column++)
             {
-                // If solution has not already been found.
-                if (!matrix[row][column].getValue().equals("0"))
+
+                if (row == 1 && column == 3)
                 {
-                    final List<String> possibilities = matrix[row][column].getPossibilities();
+                    System.out.println(column);
+                }
+                // If solution has not already been found.
+                if (matrix[row][column].getValue().equals("0"))
+                {
+                    final List<String> markedForDeletion = new ArrayList<>();
+
+                    final List<String> possibilities = new ArrayList<>(matrix[row][column].getPossibilities());
 
                     for (final String possibility : possibilities)
                     {
@@ -55,22 +63,21 @@ public class RemovePossibilitiesStrategy implements Strategy
                                 || search.searchInColumn(matrix, n, possibility, column) != -1
                                 || search.searchInBox(matrix, n, possibility, row, column) != null)
                         {
-                            possibilities.remove(possibility);
+                            markedForDeletion.add(possibility);
                         }
                     }
 
+                    matrix[row][column].deletePossibilities(markedForDeletion);
+
                     // If there is only one possibility, that's the answer for that cell.
-                    if (possibilities.size() == 1)
+                    if (matrix[row][column].getPossibilities().size() == 1)
                     {
-                        matrix[row][column].setValue(possibilities.get(0));
+                        matrix[row][column].setValue(matrix[row][column].getPossibilities().get(0));
                         matrix[row][column].clearPossibilities();
                         answerCount++;
 
-                        // If there was at least one cell solved, the board has changed.
-                        if (answerCount == 1)
-                        {
-                            board.setHasChanged(true);
-                        }
+                        board.setHasChanged(true);
+                        continue;
                     }
                 }
                 else

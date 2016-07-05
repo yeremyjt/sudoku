@@ -21,10 +21,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
-public class FindPossibilitiesStrategyTest
+public class RemovePossibilitiesStrategyTest
 {
-
-    @Named("findPossibilitiesStrategy")
+    @Named("removePossibilitiesStrategy")
     @Inject
     private Strategy strategy;
 
@@ -53,7 +52,7 @@ public class FindPossibilitiesStrategyTest
     {
         final ObjectMapper objectMapper = new ObjectMapper();
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("input-board.json");
+                .getResourceAsStream("first-strategy-one-iteration.json");
         try
         {
             inputBoard = objectMapper.readValue(inputStream, Board.class);
@@ -64,7 +63,7 @@ public class FindPossibilitiesStrategyTest
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("first-strategy-one-iteration.json");
+                .getResourceAsStream("second-strategy-one-iteration.json");
         try
         {
             expectedBoard = objectMapper.readValue(inputStream, Board.class);
@@ -73,16 +72,16 @@ public class FindPossibilitiesStrategyTest
         {
             e.printStackTrace();
         }
-
     }
 
     @Test
-    public void testFindPossibilitiesStrategy_ok()
+    public void testRemovePossibilitiesStrategy_ok()
     {
         assertNotNull(inputBoard);
         assertNotNull(expectedBoard);
 
         strategy.solve(inputBoard, characters);
+
         assertEquals(expectedBoard.getMatrix()[0][0], inputBoard.getMatrix()[0][0]);
         assertEquals(expectedBoard.getMatrix()[0][1], inputBoard.getMatrix()[0][1]);
         assertEquals(expectedBoard.getMatrix()[0][2], inputBoard.getMatrix()[0][2]);
@@ -175,5 +174,4 @@ public class FindPossibilitiesStrategyTest
 
         assertEquals(expectedBoard, inputBoard);
     }
-
 }

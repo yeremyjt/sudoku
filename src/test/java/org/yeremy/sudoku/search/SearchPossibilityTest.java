@@ -25,7 +25,7 @@ public class SearchPossibilityTest
     {
         final ObjectMapper objectMapper = new ObjectMapper();
         final InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("first-strategy-one-iteration.txt");
+                .getResourceAsStream("first-strategy-one-iteration.json");
         try
         {
             board = objectMapper.readValue(inputStream, Board.class);

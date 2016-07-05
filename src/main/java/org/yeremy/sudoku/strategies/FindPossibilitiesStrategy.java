@@ -80,7 +80,7 @@ public class FindPossibilitiesStrategy implements Strategy
                         continue;
                     }
 
-                    matrix[row][column].setPosibilities(possibilities);
+                    matrix[row][column].setPossibilities(possibilities);
                 }
                 // Solution has been found for this cell
                 else
