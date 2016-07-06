@@ -2,6 +2,7 @@ package org.yeremy.sudoku.strategies;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
-public class RemovePossibilitiesStrategyTest
+public class RemovePossibilitiesStrategyTest_OneIteration
 {
     @Named("removePossibilitiesStrategy")
     @Inject
@@ -29,6 +30,7 @@ public class RemovePossibilitiesStrategyTest
 
     private static Board inputBoard;
     private static Board expectedBoard;
+
 
     private final List<String> characters = new ArrayList<String>()
     {
@@ -48,9 +50,10 @@ public class RemovePossibilitiesStrategyTest
     private final int n = 9;
 
     @BeforeClass
-    public static void setUp()
+    public static void setUp() throws IOException
     {
         final ObjectMapper objectMapper = new ObjectMapper();
+
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("first-strategy-one-iteration.json");
         try
@@ -72,12 +75,14 @@ public class RemovePossibilitiesStrategyTest
         {
             e.printStackTrace();
         }
+
+        inputStream.close();
     }
 
     @Test
-    public void testRemovePossibilitiesStrategy_ok()
+
+    public void testRemovePossibilitiesStrategy_oneIteration()
     {
-        assertNotNull(inputBoard);
         assertNotNull(expectedBoard);
 
         strategy.solve(inputBoard, characters);
