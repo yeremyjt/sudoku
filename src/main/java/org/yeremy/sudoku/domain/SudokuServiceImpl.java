@@ -28,30 +28,19 @@ public class SudokuServiceImpl implements SudokuService
     @Override
     public Board solve(Board board, List<String> characters)
     {
+        // First find all the possibilities
         findPossibilitiesStrategy.solve(board, characters);
 
-        if (board.isSolved())
+        // Iterate through the strategies until a solution is found or until it's proven it's an unsolvable board.
+        while (!board.isSolved())
         {
-            return board;
-        }
-
-        removePossibilitiesStrategy.solve(board, characters);
-
-        if (board.isSolved())
-        {
-            return board;
-        }
-
-        processOfEliminationStrategy.solve(board, characters);
-
-        if (board.isSolved())
-        {
-            return board;
-        }
-
-        while (!board.isSolved() && board.isHasChanged())
-        {
-            removePossibilitiesStrategy.solve(board, characters);
+            // Since the second strategy is the most repeated strategy, we iterate through it until we cannot find more
+            // solutions, or until we solve the board. Easy boards will be solved by iterating through the second
+            // strategy only.
+            while (board.isHasChanged() && !board.isSolved())
+            {
+                removePossibilitiesStrategy.solve(board, characters);
+            }
 
             if (board.isSolved())
             {
@@ -59,6 +48,16 @@ public class SudokuServiceImpl implements SudokuService
             }
 
             processOfEliminationStrategy.solve(board, characters);
+
+            if (!board.isHasChanged())
+            {
+                return board;
+            }
+
+            if (board.isSolved())
+            {
+                return board;
+            }
         }
 
         return board;

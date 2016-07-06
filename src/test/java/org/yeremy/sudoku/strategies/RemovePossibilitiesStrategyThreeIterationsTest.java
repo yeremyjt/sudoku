@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
-public class RemovePossibilitiesStrategyTest_TwoIterations
+public class RemovePossibilitiesStrategyThreeIterationsTest
 {
     @Named("removePossibilitiesStrategy")
     @Inject
@@ -54,7 +54,7 @@ public class RemovePossibilitiesStrategyTest_TwoIterations
         final ObjectMapper objectMapper = new ObjectMapper();
 
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("second-strategy-one-iteration.json");
+                .getResourceAsStream("second-strategy-two-iterations.json");
         try
         {
             inputBoard = objectMapper.readValue(inputStream, Board.class);
@@ -65,7 +65,7 @@ public class RemovePossibilitiesStrategyTest_TwoIterations
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("second-strategy-two-iterations.json");
+                .getResourceAsStream("second-strategy-three-iterations.json");
         try
         {
             expectedBoard = objectMapper.readValue(inputStream, Board.class);
@@ -79,7 +79,6 @@ public class RemovePossibilitiesStrategyTest_TwoIterations
     }
 
     @Test
-
     public void testRemovePossibilitiesStrategy_twoIterations()
     {
         assertNotNull(inputBoard);

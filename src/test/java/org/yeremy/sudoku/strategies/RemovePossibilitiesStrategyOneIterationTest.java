@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
-public class RemovePossibilitiesStrategyTest_ThreeIterations
+public class RemovePossibilitiesStrategyOneIterationTest
 {
     @Named("removePossibilitiesStrategy")
     @Inject
@@ -30,6 +30,7 @@ public class RemovePossibilitiesStrategyTest_ThreeIterations
 
     private static Board inputBoard;
     private static Board expectedBoard;
+
 
     private final List<String> characters = new ArrayList<String>()
     {
@@ -54,7 +55,7 @@ public class RemovePossibilitiesStrategyTest_ThreeIterations
         final ObjectMapper objectMapper = new ObjectMapper();
 
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("second-strategy-two-iterations.json");
+                .getResourceAsStream("first-strategy-one-iteration.json");
         try
         {
             inputBoard = objectMapper.readValue(inputStream, Board.class);
@@ -65,7 +66,7 @@ public class RemovePossibilitiesStrategyTest_ThreeIterations
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("second-strategy-three-iterations.json");
+                .getResourceAsStream("second-strategy-one-iteration.json");
         try
         {
             expectedBoard = objectMapper.readValue(inputStream, Board.class);
@@ -79,10 +80,11 @@ public class RemovePossibilitiesStrategyTest_ThreeIterations
     }
 
     @Test
-    public void testRemovePossibilitiesStrategy_twoIterations()
+
+    public void testRemovePossibilitiesStrategy_oneIteration()
     {
-        assertNotNull(inputBoard);
         assertNotNull(expectedBoard);
+
         strategy.solve(inputBoard, characters);
 
         assertEquals(expectedBoard.getMatrix()[0][0], inputBoard.getMatrix()[0][0]);
