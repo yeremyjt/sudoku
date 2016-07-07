@@ -172,6 +172,5 @@ public class SudokuServiceTest
         assertEquals(expectedBoard.getMatrix()[8][8], inputBoard.getMatrix()[8][8]);
 
         assertEquals(expectedBoard, inputBoard);
-
     }
 }
