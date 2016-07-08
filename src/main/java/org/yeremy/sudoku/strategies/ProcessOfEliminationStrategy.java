@@ -17,7 +17,7 @@ import org.yeremy.sudoku.search.Search;
  * @author yeremy
  *
  */
-@Named("processOfElimininationStrategy")
+@Named("processOfEliminationStrategy")
 @Singleton
 public class ProcessOfEliminationStrategy implements Strategy
 {
