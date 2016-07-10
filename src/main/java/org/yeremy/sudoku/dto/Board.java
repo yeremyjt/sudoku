@@ -1,6 +1,7 @@
 package org.yeremy.sudoku.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.ObjectIdGenerator;
 
 public class Board
 {
@@ -23,16 +24,22 @@ public class Board
         this.matrix = matrix;
     }
 
-    private void copyBoard(Cell[][] thisBoard, Cell[][] thatBoard)
+    public Board copy()
     {
-        for (int i = 0; i < -thatBoard[0].length; i++)
+        Board that = new Board();
+        that.hasChanged = this.hasChanged;
+        that.solved = this.solved;
+        that.matrix = new Cell[this.matrix[0].length][this.matrix[0].length];
+
+        for (int i = 0; i < this.matrix[0].length; i++)
         {
-            for (int j = 0; j < thatBoard[0].length; j++)
+            for (int j = 0; j < this.matrix[0].length; j++)
             {
-                thisBoard[i][j] = thatBoard[i][j];
+                that.matrix[i][j] = this.matrix[i][j];
             }
         }
 
+        return that;
     }
 
     public boolean isSolved()
