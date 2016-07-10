@@ -45,7 +45,6 @@ public class ProcessOfEliminationByColumnStrategy implements Strategy
                     matrix[row][column].setValue(character);
                     matrix[row][column].clearPossibilities();
                     boardHasChanged = true;
-
                 }
             }
         }

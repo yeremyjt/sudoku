@@ -16,7 +16,6 @@ import org.yeremy.sudoku.search.Search;
  * that are no longer possible because and answer has been found in a different cell on a given row, column, or box.
  *
  * @author yeremy
- *
  */
 @Named("removePossibilitiesStrategy")
 @Singleton

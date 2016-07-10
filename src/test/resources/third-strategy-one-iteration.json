@@ -1,258 +1,438 @@
 {
-	"matrix": [
-		[{
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["5","3"]
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["1","4","5"]
-		}, {
-			"value": "0",
-			"possibilities": ["1","4","5","3"]
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","3"]
-		}],
-		[{
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}],
-		[{
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["2","3","5"]
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["2","3","5"]
-		}, {
-			"value": "0",
-			"possibilities": ["7","5"]
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["7","5","3"]
-		}],
-		[{
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["2","3"]
-		}, {
-			"value": "0",
-			"possibilities": ["2","3"]
-		}, {
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}],
-		[{
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["5","3"]
-		}, {
-			"value": "0",
-			"possibilities": ["4","5"]
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","3"]
-		}, {
-			"value": "1",
-			"possibilities": []
-		}],
-		[{
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","2"]
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","2"]
-		}, {
-			"value": "0",
-			"possibilities": ["4","5"]
-		}],
-		[{
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","2"]
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","2"]
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["4","5"]
-		}],
-		[{
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["4","5","3"]
-		}, {
-			"value": "0",
-			"possibilities": ["1","4","5","3"]
-		}, {
-			"value": "0",
-			"possibilities": ["5","3"]
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["1","4"]
-		}, {
-			"value": "9",
-			"possibilities": []
-		}],
-		[{
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": ["1","2"]
-		}, {
-			"value": "0",
-			"possibilities": ["1","2"]
-		}, {
-			"value": "8",
-			"possibilities": []
-		}]
-	],
-	"solved": false,
-	"hasChanged": true
+  "matrix": [
+    [
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "3"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "2",
+          "3",
+          "5"
+        ]
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "2",
+          "3",
+          "5"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "7",
+          "5"
+        ]
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "7",
+          "5",
+          "3"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "2"
+        ]
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "2"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "2"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "2"
+        ]
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5"
+        ]
+      }
+    ],
+    [
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4",
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "5",
+          "3"
+        ]
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4"
+        ]
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "value": "0",
+        "possibilities": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      }
+    ]
+  ],
+  "solved": false,
+  "hasChanged": true
 }

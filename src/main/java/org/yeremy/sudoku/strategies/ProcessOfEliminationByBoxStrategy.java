@@ -73,6 +73,5 @@ public class ProcessOfEliminationByBoxStrategy implements Strategy
         {
             board.setSolved(true);
         }
-
     }
 }

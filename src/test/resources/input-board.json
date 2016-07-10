@@ -1,258 +1,348 @@
 {
-	"matrix": [
-		[{
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}],
-		[{
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}],
-		[{
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}],
-		[{
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "1",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}],
-		[{
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}],
-		[{
-			"value": "5",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "6",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}],
-		[{
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}],
-		[{
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "4",
-			"possibilities": []
-		}, {
-			"value": "3",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}],
-		[{
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "2",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "8",
-			"possibilities": []
-		}, {
-			"value": "9",
-			"possibilities": []
-		}, {
-			"value": "7",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}, {
-			"value": "0",
-			"possibilities": []
-		}]
-	],
-	"solved": false,
-	"hasChanged": false
+  "matrix": [
+    [
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "1",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "5",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "6",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "4",
+        "possibilities": []
+      },
+      {
+        "value": "3",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      }
+    ],
+    [
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "2",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "8",
+        "possibilities": []
+      },
+      {
+        "value": "9",
+        "possibilities": []
+      },
+      {
+        "value": "7",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      },
+      {
+        "value": "0",
+        "possibilities": []
+      }
+    ]
+  ],
+  "solved": false,
+  "hasChanged": false
 }

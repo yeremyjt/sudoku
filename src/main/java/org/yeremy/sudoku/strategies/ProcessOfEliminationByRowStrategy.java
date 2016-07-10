@@ -16,7 +16,6 @@ import org.yeremy.sudoku.search.Search;
  * has*one cell with a possibility of 5,that is the solution for that cell.The same applies for a column and a box.**
  *
  * @author yeremy
- *
  */
 @Named("processOfEliminationByRowStrategy")
 @Singleton

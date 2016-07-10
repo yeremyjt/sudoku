@@ -37,7 +37,6 @@ public class RemovePossibilitiesStrategyTest
     private static Board expectedBoardThreeIterations;
     private static Board expectedBoardFourIterations;
 
-
     private final List<String> characters = new ArrayList<String>()
     {
         {

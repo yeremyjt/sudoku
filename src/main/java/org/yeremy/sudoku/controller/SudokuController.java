@@ -30,7 +30,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @ComponentScan("org.yeremy.sudoku")
 @RequestMapping("/")
 @Api(value = "/")
-public class SudokuController {
+public class SudokuController
+{
     @Inject
     private SudokuService sudokuService;
 
@@ -43,10 +44,12 @@ public class SudokuController {
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
-            @ApiResponse(code = 500, message = "Failure")})
+            @ApiResponse(code = 500, message = "Failure") })
     @ResponseBody
-    public Board solveSudoku(@RequestBody @ApiParam Board board) {
-        final List<String> characters = new ArrayList<String>() {
+    public Board solveSudoku(@RequestBody @ApiParam Board board)
+    {
+        final List<String> characters = new ArrayList<String>()
+        {
             {
                 add("1");
                 add("2");
@@ -62,7 +65,8 @@ public class SudokuController {
         return sudokuService.solve(board, characters);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         SpringApplication.run(SudokuController.class, args);
     }
 }

@@ -16,7 +16,6 @@ import org.yeremy.sudoku.search.Search;
  * the board. This strategy must run before the other two. This is the first strategy.
  *
  * @author yeremy
- *
  */
 @Named("findPossibilitiesStrategy")
 @Singleton
