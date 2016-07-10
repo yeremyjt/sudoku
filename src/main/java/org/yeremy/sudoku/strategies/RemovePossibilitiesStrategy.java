@@ -45,11 +45,6 @@ public class RemovePossibilitiesStrategy implements Strategy
         {
             for (int column = 0; column < n; column++)
             {
-
-                if (row == 1 && column == 3)
-                {
-                    System.out.println(column);
-                }
                 // If solution has not already been found.
                 if (matrix[row][column].getValue().equals("0"))
                 {

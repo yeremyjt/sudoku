@@ -22,7 +22,7 @@ public class SudokuServiceImpl implements SudokuService
     private Strategy removePossibilitiesStrategy;
 
     @Inject
-    @Named("processOfEliminationStrategy")
+    @Named("processOfEliminationByRowStrategy")
     private Strategy processOfEliminationStrategy;
 
     @Override

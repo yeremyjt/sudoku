@@ -3,6 +3,11 @@ package org.yeremy.sudoku.search;
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.Coordinate;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
+
+@Named("searchPossibility")
+@Singleton
 public class SearchPossibility implements Search
 {
 
@@ -52,6 +57,12 @@ public class SearchPossibility implements Search
         {
             for (int j = boxLeftColumn; j <= boxRightColumn; j++)
             {
+                // If solution for this possibility has been found
+                if (matrix[row][column].getValue().equals(character))
+                {
+                    return null;
+                }
+
                 if (matrix[i][j].getPossibilities().contains(character))
                 {
                     counter++;
@@ -78,11 +89,22 @@ public class SearchPossibility implements Search
     @Override
     public int searchInColumn(Cell[][] matrix, int n, String character, int column)
     {
+        if (column == 4 && character.equals("3"))
+        {
+            System.out.println(column);
+        }
+
         int counter = 0;
         int rowToReturn = -1;
 
         for (int row = 0; row < n; row++)
         {
+            // If solution for this possibility has been found
+            if (matrix[row][column].getValue().equals(character))
+            {
+                return -1;
+            }
+
             if (matrix[row][column].getPossibilities().contains(character))
             {
                 counter++;
@@ -111,6 +133,12 @@ public class SearchPossibility implements Search
 
         for (int column = 0; column < n; column++)
         {
+            // If solution for this possibility has been found
+            if (matrix[row][column].getValue().equals(character))
+            {
+                return -1;
+            }
+
             if (matrix[row][column].getPossibilities().contains(character))
             {
                 counter++;
@@ -130,5 +158,4 @@ public class SearchPossibility implements Search
 
         return -1;
     }
-
 }
