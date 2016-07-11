@@ -2,7 +2,7 @@
   "matrix": [
     [
       {
-        "value": "9",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -10,7 +10,7 @@
         "possibilities": []
       },
       {
-        "value": "2",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -19,10 +19,7 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "7",
@@ -30,28 +27,15 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       }
     ],
     [
@@ -60,11 +44,11 @@
         "possibilities": []
       },
       {
-        "value": "5",
+        "value": "0",
         "possibilities": []
       },
       {
-        "value": "7",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -84,7 +68,7 @@
         "possibilities": []
       },
       {
-        "value": "9",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -94,11 +78,11 @@
     ],
     [
       {
-        "value": "4",
+        "value": "0",
         "possibilities": []
       },
       {
-        "value": "1",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -107,11 +91,7 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "3",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "9",
@@ -119,34 +99,19 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "3",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "7",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "5",
-          "8",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "7",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       }
     ],
     [
@@ -155,7 +120,7 @@
         "possibilities": []
       },
       {
-        "value": "4",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -164,17 +129,11 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "1",
@@ -182,10 +141,7 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "9"
-        ]
+        "possibilities": []
       },
       {
         "value": "7",
@@ -198,11 +154,11 @@
     ],
     [
       {
-        "value": "2",
+        "value": "0",
         "possibilities": []
       },
       {
-        "value": "7",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -219,25 +175,15 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "1",
@@ -246,15 +192,15 @@
     ],
     [
       {
-        "value": "1",
+        "value": "0",
         "possibilities": []
       },
       {
-        "value": "6",
+        "value": "0",
         "possibilities": []
       },
       {
-        "value": "3",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -263,19 +209,11 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "5",
-          "9"
-        ]
+        "possibilities": []
       },
       {
         "value": "8",
@@ -283,18 +221,11 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "possibilities": []
       }
     ],
     [
@@ -312,27 +243,15 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "5",
-          "8"
-        ]
+        "possibilities": []
       },
       {
         "value": "3",
@@ -344,10 +263,7 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "possibilities": []
       }
     ],
     [
@@ -360,49 +276,28 @@
         "possibilities": []
       },
       {
-        "value": "8",
+        "value": "0",
         "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "7"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5"
-        ]
+        "possibilities": []
       },
       {
         "value": "9",
@@ -415,7 +310,7 @@
         "possibilities": []
       },
       {
-        "value": "3",
+        "value": "0",
         "possibilities": []
       },
       {
@@ -432,27 +327,18 @@
       },
       {
         "value": "0",
-        "possibilities": [
-          "2",
-          "6"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "2"
-        ]
+        "possibilities": []
       },
       {
         "value": "0",
-        "possibilities": [
-          "1",
-          "2"
-        ]
+        "possibilities": []
       },
       {
-        "value": "8",
+        "value": "0",
         "possibilities": []
       }
     ]

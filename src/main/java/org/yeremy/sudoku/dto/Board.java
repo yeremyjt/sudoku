@@ -47,7 +47,7 @@ public class Board
         return solved;
     }
 
-    public boolean isHasChanged()
+    public boolean hasChanged()
     {
         return hasChanged;
     }

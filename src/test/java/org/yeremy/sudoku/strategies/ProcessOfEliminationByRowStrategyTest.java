@@ -94,7 +94,7 @@ public class ProcessOfEliminationByRowStrategyTest
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("third-strategy-one-iteration.json");
+                .getResourceAsStream("third-strategy-row-one-iteration.json");
         try
         {
             expectedBoardThirdStrategy = objectMapper.readValue(inputStream, Board.class);

@@ -23,7 +23,15 @@ public class SudokuServiceImpl implements SudokuService
 
     @Inject
     @Named("processOfEliminationByRowStrategy")
-    private Strategy processOfEliminationStrategy;
+    private Strategy processOfEliminationByRowStrategy;
+
+    @Inject
+    @Named("processOfEliminationByColumnStrategy")
+    private Strategy processOfEliminationByColumnStrategy;
+
+    @Inject
+    @Named("processOfEliminationByBoxStrategy")
+    private Strategy processOfEliminationByBoxStrategy;
 
     @Override
     public Board solve(Board board, List<String> characters)
@@ -37,7 +45,7 @@ public class SudokuServiceImpl implements SudokuService
             // Since the second strategy is the most repeated strategy, we iterate through it until we cannot find more
             // solutions, or until we solve the board. Easy boards will be solved by iterating through the second
             // strategy only.
-            while (board.isHasChanged() && !board.isSolved())
+            while (board.hasChanged() && !board.isSolved())
             {
                 removePossibilitiesStrategy.solve(board, characters);
             }
@@ -47,14 +55,27 @@ public class SudokuServiceImpl implements SudokuService
                 return board;
             }
 
-            processOfEliminationStrategy.solve(board, characters);
+            processOfEliminationByRowStrategy.solve(board, characters);
 
-            if (!board.isHasChanged())
+            if (board.hasChanged())
             {
-                return board;
+                continue;
             }
 
-            if (board.isSolved())
+            processOfEliminationByColumnStrategy.solve(board, characters);
+
+            if (board.hasChanged())
+            {
+                continue;
+            }
+
+            processOfEliminationByBoxStrategy.solve(board, characters);
+
+            if (board.hasChanged())
+            {
+                continue;
+            }
+            else
             {
                 return board;
             }

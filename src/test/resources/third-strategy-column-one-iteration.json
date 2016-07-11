@@ -137,12 +137,8 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "7",
-          "5",
-          "3"
-        ]
+        "value": "7",
+        "possibilities": []
       }
     ],
     [
@@ -225,8 +221,12 @@
         ]
       },
       {
-        "value": "3",
-        "possibilities": []
+        "value": "0",
+        "possibilities": [
+          "4",
+          "5",
+          "3"
+        ]
       },
       {
         "value": "1",
@@ -364,14 +364,20 @@
         ]
       },
       {
-        "value": "7",
-        "possibilities": []
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4",
+          "5",
+          "7"
+        ]
       },
       {
         "value": "0",
         "possibilities": [
           "1",
-          "4"
+          "4",
+          "5"
         ]
       },
       {
@@ -425,5 +431,5 @@
     ]
   ],
   "solved": false,
-  "hasChanged": false
+  "hasChanged": true
 }

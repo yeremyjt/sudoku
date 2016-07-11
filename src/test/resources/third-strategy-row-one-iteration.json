@@ -137,8 +137,12 @@
         "possibilities": []
       },
       {
-        "value": "7",
-        "possibilities": []
+        "value": "0",
+        "possibilities": [
+          "7",
+          "5",
+          "3"
+        ]
       }
     ],
     [
@@ -353,8 +357,13 @@
         ]
       },
       {
-        "value": "1",
-        "possibilities": []
+        "value": "0",
+        "possibilities": [
+          "1",
+          "4",
+          "5",
+          "3"
+        ]
       },
       {
         "value": "0",
@@ -364,19 +373,15 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "7"
-        ]
+        "value": "7",
+        "possibilities": []
       },
       {
         "value": "0",
         "possibilities": [
           "1",
-          "4"
+          "4",
+          "5"
         ]
       },
       {

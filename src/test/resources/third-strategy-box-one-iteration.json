@@ -133,12 +133,8 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "5",
-          "8",
-          "3"
-        ]
+        "value": "8",
+        "possibilities": []
       },
       {
         "value": "0",
@@ -181,11 +177,8 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "9"
-        ]
+        "value": "9",
+        "possibilities": []
       },
       {
         "value": "7",
@@ -232,12 +225,8 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "3",
+        "possibilities": []
       },
       {
         "value": "1",
@@ -262,20 +251,12 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "value": "4",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "5",
-          "9"
-        ]
+        "value": "9",
+        "possibilities": []
       },
       {
         "value": "8",
@@ -327,12 +308,8 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "5",
-          "8"
-        ]
+        "value": "8",
+        "possibilities": []
       },
       {
         "value": "3",
@@ -372,13 +349,8 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "1",
+        "possibilities": []
       },
       {
         "value": "0",
@@ -388,13 +360,8 @@
         ]
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "7"
-        ]
+        "value": "7",
+        "possibilities": []
       },
       {
         "value": "0",
@@ -431,11 +398,8 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "6"
-        ]
+        "value": "6",
+        "possibilities": []
       },
       {
         "value": "0",
@@ -458,5 +422,5 @@
     ]
   ],
   "solved": false,
-  "hasChanged": false
+  "hasChanged": true
 }

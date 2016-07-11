@@ -18,40 +18,24 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "value": "5",
+        "possibilities": []
       },
       {
         "value": "7",
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5"
-        ]
+        "value": "1",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "4",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "3",
+        "possibilities": []
       }
     ],
     [
@@ -106,43 +90,28 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "3",
-          "5"
-        ]
+        "value": "3",
+        "possibilities": []
       },
       {
         "value": "9",
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "3",
-          "5"
-        ]
+        "value": "2",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "7",
-          "5"
-        ]
+        "value": "5",
+        "possibilities": []
       },
       {
         "value": "8",
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "7",
-          "5",
-          "3"
-        ]
+        "value": "7",
+        "possibilities": []
       }
     ],
     [
@@ -159,18 +128,12 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "3"
-        ]
+        "value": "2",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "2",
-          "3"
-        ]
+        "value": "3",
+        "possibilities": []
       },
       {
         "value": "1",
@@ -211,26 +174,16 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "value": "5",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "value": "4",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "3",
+        "possibilities": []
       },
       {
         "value": "1",
@@ -255,12 +208,8 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "value": "4",
+        "possibilities": []
       },
       {
         "value": "9",
@@ -271,19 +220,12 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "value": "2",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "value": "5",
+        "possibilities": []
       }
     ],
     [
@@ -300,20 +242,12 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "value": "5",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "2"
-        ]
+        "value": "2",
+        "possibilities": []
       },
       {
         "value": "8",
@@ -328,11 +262,8 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5"
-        ]
+        "value": "4",
+        "possibilities": []
       }
     ],
     [
@@ -349,39 +280,24 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "4",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4",
-          "5",
-          "3"
-        ]
+        "value": "1",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "5",
-          "3"
-        ]
+        "value": "3",
+        "possibilities": []
       },
       {
         "value": "7",
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "4"
-        ]
+        "value": "5",
+        "possibilities": []
       },
       {
         "value": "9",
@@ -414,18 +330,12 @@
         "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "2"
-        ]
+        "value": "2",
+        "possibilities": []
       },
       {
-        "value": "0",
-        "possibilities": [
-          "1",
-          "2"
-        ]
+        "value": "1",
+        "possibilities": []
       },
       {
         "value": "8",
@@ -433,6 +343,6 @@
       }
     ]
   ],
-  "solved": false,
+  "solved": true,
   "hasChanged": true
 }

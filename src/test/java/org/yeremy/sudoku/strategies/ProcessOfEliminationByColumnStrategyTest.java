@@ -66,7 +66,7 @@ public class ProcessOfEliminationByColumnStrategyTest
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("fourth-strategy-one-iteration.json");
+                .getResourceAsStream("third-strategy-column-one-iteration.json");
         try
         {
             expectedBoardFourthStrategy = objectMapper.readValue(inputStream, Board.class);
