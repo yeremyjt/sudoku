@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.yeremy.sudoku.domain.SudokuService;
 import org.yeremy.sudoku.dto.Board;
 
@@ -30,7 +32,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @ComponentScan("org.yeremy.sudoku")
 @RequestMapping("/")
 @Api(value = "/")
-public class SudokuController
+public class SudokuController extends WebMvcConfigurerAdapter
 {
     @Inject
     private SudokuService sudokuService;
@@ -63,6 +65,11 @@ public class SudokuController
             }
         };
         return sudokuService.solve(board, characters);
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("forward:/index.html");
     }
 
     public static void main(String[] args)
