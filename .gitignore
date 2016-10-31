@@ -6,8 +6,10 @@
 .idea/
 *.iml
 typings
-app/**/*.js
-app/**/*.map
+src/main/resources/static/app/**/*.js
+src/main/resources/static/app/*.js
+src/main/resources/static/app/**/*.map
+src/main/resources/static/app/*.map
 node_modules
 jspm_packages
 bower_components
