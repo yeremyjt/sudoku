@@ -6,15 +6,10 @@
 .idea/
 *.iml
 typings
-<<<<<<< HEAD
 src/main/resources/static/app/**/*.js
 src/main/resources/static/app/*.js
 src/main/resources/static/app/**/*.map
 src/main/resources/static/app/*.map
-=======
-app/*/*.js
-app/*/*.map
->>>>>>> 42cc235da662806d22dbda416265a153b3d33f50
 node_modules
 jspm_packages
 bower_components
