@@ -17,6 +17,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.yeremy.sudoku.domain.SudokuService;
 import org.yeremy.sudoku.dto.Board;
+import org.yeremy.sudoku.dto.InputBoard;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -39,7 +40,7 @@ public class SudokuController extends WebMvcConfigurerAdapter
 
     @RequestMapping(value = "solve", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "board", value = "Sudoku Board", required = true, dataType = "Board")
+            @ApiImplicitParam(name = "inputBoard", value = "Sudoku Board", required = true, dataType = "InputBoard")
     })
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Success", response = Board.class),
@@ -48,7 +49,7 @@ public class SudokuController extends WebMvcConfigurerAdapter
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Failure") })
     @ResponseBody
-    public Board solveSudoku(@RequestBody @ApiParam Board board)
+    public Board solveSudoku(@RequestBody @ApiParam InputBoard inputBoard)
     {
         final List<String> characters = new ArrayList<String>()
         {
@@ -64,11 +65,12 @@ public class SudokuController extends WebMvcConfigurerAdapter
                 add("9");
             }
         };
-        return sudokuService.solve(board, characters);
+        return sudokuService.solve(inputBoard, characters);
     }
 
     @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
+    public void addViewControllers(ViewControllerRegistry registry)
+    {
         registry.addViewController("/").setViewName("forward:/index.html");
     }
 

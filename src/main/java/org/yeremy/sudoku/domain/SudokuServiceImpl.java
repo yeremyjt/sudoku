@@ -1,5 +1,6 @@
 package org.yeremy.sudoku.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -7,6 +8,8 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import org.yeremy.sudoku.dto.Board;
+import org.yeremy.sudoku.dto.Cell;
+import org.yeremy.sudoku.dto.InputBoard;
 import org.yeremy.sudoku.strategies.Strategy;
 
 @Named
@@ -34,8 +37,10 @@ public class SudokuServiceImpl implements SudokuService
     private Strategy processOfEliminationByBoxStrategy;
 
     @Override
-    public Board solve(Board board, List<String> characters)
+    public Board solve(InputBoard inputBoard, List<String> characters)
     {
+        Board board = convertToBoard(inputBoard);
+
         // First find all the possibilities
         findPossibilitiesStrategy.solve(board, characters);
 
@@ -81,6 +86,30 @@ public class SudokuServiceImpl implements SudokuService
             }
         }
 
+        return board;
+    }
+
+    private Board convertToBoard(InputBoard inputBoard)
+    {
+        int n = inputBoard.getMatrix()[0].length;
+        Board board = new Board();
+        board.setHasChanged(false);
+        board.setSolved(false);
+
+        Cell[][] matrix = new Cell[n][n];
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Cell cell = new Cell();
+                cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                cell.setPossibilities(new ArrayList<String>());
+                matrix[i][j] = cell;
+            }
+        }
+
+        board.setMatrix(matrix);
         return board;
     }
 }

@@ -1,6 +1,7 @@
 package org.yeremy.sudoku.search;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -8,13 +9,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.yeremy.sudoku.dto.Board;
+import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.Coordinate;
+import org.yeremy.sudoku.dto.InputBoard;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class SearchValueTest
 {
+    private static InputBoard inputBoard;
     private static Board board;
     private final Search search = new SearchValue();
 
@@ -28,7 +32,28 @@ public class SearchValueTest
                 .getResourceAsStream("input-board.json");
         try
         {
-            board = objectMapper.readValue(inputStream, Board.class);
+            inputBoard = objectMapper.readValue(inputStream, InputBoard.class);
+
+            int n = inputBoard.getMatrix()[0].length;
+            board = new Board();
+            board.setHasChanged(false);
+            board.setSolved(false);
+
+            Cell[][] matrix = new Cell[n][n];
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Cell cell = new Cell();
+                    cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    cell.setPossibilities(new ArrayList<String>());
+                    matrix[i][j] = cell;
+                }
+            }
+
+            board.setMatrix(matrix);
+
         }
         catch (final Exception e)
         {
@@ -133,5 +158,4 @@ public class SearchValueTest
         expected = null;
         Assert.assertEquals(expected, actual);
     }
-
 }
