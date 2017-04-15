@@ -33,6 +33,7 @@ public class SudokuController extends WebMvcConfigurerAdapter
     @Inject
     private SudokuService sudokuService;
 
+    @SuppressWarnings("serial")
     @RequestMapping(value = "solve", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "inputBoard", value = "Sudoku Board", required = true, dataType = "InputBoard")
