@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { InputBoard } from '../model/input-board';
-import { SudokuService } from './sudoku.service';
-import { HTTP_PROVIDERS} from 'angular2/http';
+// import { SudokuService } from './sudoku.service';
+// import { HTTP_PROVIDERS} from 'angular2/http';
 
 @Component({
     selector: 'nine-by-nine',
@@ -9,11 +9,11 @@ import { HTTP_PROVIDERS} from 'angular2/http';
     styleUrls: [
         'app/nine-by-nine/nine-by-nine.css'
     ],
-    providers: [SudokuService, HTTP_PROVIDERS]
+    // providers: [SudokuService, HTTP_PROVIDERS]
 })
 
 export class NineByNineComponent {
-  sudokuService: SudokuService;
+  // sudokuService: SudokuService;
   inputBoard: InputBoard;
   url: string = 'http://localhost:8080';
   clickMessage = '';
@@ -99,10 +99,10 @@ export class NineByNineComponent {
   cell79: string;
   cell80: string;
 
-   constructor(sudokuService: SudokuService) {
-     this.sudokuService = sudokuService;
-   }
-
+  //  constructor(sudokuService: SudokuService) {
+  //    this.sudokuService = sudokuService;
+  //  }
+   //
 
 
   solveNineByNine() {
