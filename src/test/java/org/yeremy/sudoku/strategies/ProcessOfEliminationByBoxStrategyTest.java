@@ -1,15 +1,6 @@
 package org.yeremy.sudoku.strategies;
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.inject.Inject;
-import javax.inject.Named;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,34 +9,29 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.yeremy.sudoku.config.TestConfig;
 import org.yeremy.sudoku.dto.Board;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class ProcessOfEliminationByBoxStrategyTest
 {
-
-    @Named("processOfEliminationByBoxStrategy")
     @Inject
+    @Named("processOfEliminationByBoxStrategy")
     private Strategy strategy;
 
     private static Board inputBoardThirdStrategy;
     private static Board expectedBoardFifthStrategy;
 
-    private final List<String> characters = new ArrayList<String>()
-    {
-        {
-            add("1");
-            add("2");
-            add("3");
-            add("4");
-            add("5");
-            add("6");
-            add("7");
-            add("8");
-            add("9");
-        }
-    };
+    private final Set<String> characters = new HashSet<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
 
     private final int n = 9;
 

@@ -1,16 +1,17 @@
 package org.yeremy.sudoku.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.yeremy.sudoku.dto.Board;
+import org.yeremy.sudoku.dto.Cell;
+import org.yeremy.sudoku.dto.InputBoard;
+import org.yeremy.sudoku.strategies.BoardType;
+import org.yeremy.sudoku.strategies.CharactersCreator;
+import org.yeremy.sudoku.strategies.Strategy;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
-
-import org.yeremy.sudoku.dto.Board;
-import org.yeremy.sudoku.dto.Cell;
-import org.yeremy.sudoku.dto.InputBoard;
-import org.yeremy.sudoku.strategies.Strategy;
+import java.util.ArrayList;
+import java.util.Set;
 
 @Named
 @Singleton
@@ -36,9 +37,18 @@ public class SudokuServiceImpl implements SudokuService
     @Named("processOfEliminationByBoxStrategy")
     private Strategy processOfEliminationByBoxStrategy;
 
+    @Inject
+    private Validator validator;
+
+    @Inject
+    private CharactersCreator charactersCreator;
+
     @Override
-    public Board solve(InputBoard inputBoard, List<String> characters)
+    public Board solveNineByNine(InputBoard inputBoard)
     {
+        validator.validateNineByNineBoard(inputBoard);
+        Set<String> characters = charactersCreator.createCharacters(BoardType.NINE_BY_NINE);
+
         Board board = convertToBoard(inputBoard);
 
         // First find all the possibilities
@@ -49,7 +59,7 @@ public class SudokuServiceImpl implements SudokuService
         {
             // Since the second strategy is the most repeated strategy, we iterate through it until we cannot find more
             // solutions, or until we solve the board. Easy boards will be solved by iterating through the second
-            // strategy only.
+            // strategy only.BoardType.NINE_BY_NINE
             while (board.hasChanged() && !board.isSolved())
             {
                 removePossibilitiesStrategy.solve(board, characters);
@@ -89,6 +99,12 @@ public class SudokuServiceImpl implements SudokuService
         return board;
     }
 
+    @Override
+    public Board solveSixteenBySixteen(InputBoard inputBoard)
+    {
+        throw new UnsupportedOperationException("Currently, solving a sixteen by sixteen board is not supported.");
+    }
+
     private Board convertToBoard(InputBoard inputBoard)
     {
         int n = inputBoard.getMatrix()[0].length;
@@ -103,7 +119,14 @@ public class SudokuServiceImpl implements SudokuService
             for (int j = 0; j < n; j++)
             {
                 Cell cell = new Cell();
-                cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                if (inputBoard.getMatrix()[i][j] != null)
+                {
+                    cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                }
+                else
+                {
+                    cell.setValue(null);
+                }
                 cell.setPossibilities(new ArrayList<String>());
                 matrix[i][j] = cell;
             }

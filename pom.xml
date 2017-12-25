@@ -23,7 +23,7 @@
         <java.version>1.8</java.version>
         <!-- You can use a later version if you are are using Java 8 -->
         <jettyVersion>9.2.0.RC0</jettyVersion>
-        <mainApplication>org.yeremy.sudoku.controller.SudokuController</mainApplication>
+        <mainApplication>org.yeremy.sudoku.web.SudokuController</mainApplication>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>

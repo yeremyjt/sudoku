@@ -1,13 +1,13 @@
 {
 	"matrix": [
-		[0,0,7,5,6,0,3,0,0],
-		[0,0,0,0,9,2,5,0,0],
-		[2,8,0,0,0,0,0,0,6],
-		[0,4,0,1,0,6,0,0,2],
-		[8,2,0,0,0,0,0,3,7],
-		[5,0,0,3,0,8,0,6,0],
-		[7,0,0,0,0,0,0,9,4],
-		[0,0,9,4,3,0,0,0,0],
-		[0,0,2,0,8,9,7,0,0]
+		[null,null,7,5,6,null,3,null,null],
+		[null,null,null,null,9,2,5,null,null],
+		[2,8,null,null,null,null,null,null,6],
+		[null,4,null,1,null,6,null,null,2],
+		[8,2,null,null,null,null,null,3,7],
+		[5,null,null,3,null,8,null,6,null],
+		[7,null,null,null,null,null,null,9,4],
+		[null,null,9,4,3,null,null,null,null],
+		[null,null,2,null,8,9,7,null,null]
 	]
 }

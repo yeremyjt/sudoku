@@ -58,7 +58,8 @@ public class SearchPossibility implements Search
             for (int j = boxLeftColumn; j <= boxRightColumn; j++)
             {
                 // If solution for this possibility has been found
-                if (matrix[row][column].getValue().equals(character))
+                if (matrix[row][column].getValue() != null &&
+                        matrix[row][column].getValue().equals(character))
                 {
                     return null;
                 }
@@ -100,7 +101,8 @@ public class SearchPossibility implements Search
         for (int row = 0; row < n; row++)
         {
             // If solution for this possibility has been found
-            if (matrix[row][column].getValue().equals(character))
+            if (matrix[row][column].getValue() != null &&
+                    matrix[row][column].getValue().equals(character))
             {
                 return -1;
             }
@@ -134,7 +136,8 @@ public class SearchPossibility implements Search
         for (int column = 0; column < n; column++)
         {
             // If solution for this possibility has been found
-            if (matrix[row][column].getValue().equals(character))
+            if (matrix[row][column].getValue() != null &&
+                    matrix[row][column].getValue().equals(character))
             {
                 return -1;
             }

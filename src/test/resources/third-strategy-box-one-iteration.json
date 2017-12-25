@@ -18,7 +18,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "5",
           "3"
@@ -29,7 +29,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "1",
           "4",
@@ -37,7 +37,7 @@
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "1",
           "4",
@@ -46,7 +46,7 @@
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5",
@@ -106,7 +106,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "2",
           "3",
@@ -118,7 +118,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "2",
           "3",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "7",
           "5"
@@ -137,7 +137,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "7",
           "5",
@@ -159,14 +159,14 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "2",
           "3"
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "2",
           "3"
@@ -211,14 +211,14 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "5",
           "3"
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5"
@@ -263,7 +263,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5",
@@ -271,7 +271,7 @@
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5"
@@ -292,7 +292,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5",
@@ -300,7 +300,7 @@
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5",
@@ -320,7 +320,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5"
@@ -341,7 +341,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "4",
           "5",
@@ -353,7 +353,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "5",
           "3"
@@ -364,7 +364,7 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "1",
           "4",
@@ -402,14 +402,14 @@
         "possibilities": []
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "1",
           "2"
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "1",
           "2"

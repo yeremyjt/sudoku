@@ -1,15 +1,7 @@
 package org.yeremy.sudoku.strategies;
 
-import static org.junit.Assert.*;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.inject.Inject;
-import javax.inject.Named;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,15 +10,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.yeremy.sudoku.config.TestConfig;
 import org.yeremy.sudoku.dto.Board;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class ProcessOfEliminationByRowStrategyTest
 {
-
-    @Named("removePossibilitiesStrategy")
     @Inject
+    @Named("removePossibilitiesStrategy")
     private Strategy secondStrategy;
 
     @Named("processOfEliminationByRowStrategy")
@@ -38,69 +38,43 @@ public class ProcessOfEliminationByRowStrategyTest
     private static Board inputBoardThirdStrategy;
     private static Board expectedBoardThirdStrategy;
 
-    private final List<String> characters = new ArrayList<String>()
-    {
-        {
-            add("1");
-            add("2");
-            add("3");
-            add("4");
-            add("5");
-            add("6");
-            add("7");
-            add("8");
-            add("9");
-        }
-    };
+    private final Set<String> characters = new HashSet<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
 
     private final int n = 9;
 
     @BeforeClass
-    public static void setUp() throws IOException
-    {
+    public static void setUp() throws IOException {
         final ObjectMapper objectMapper = new ObjectMapper();
 
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("input-board-third-strategy.json");
-        try
-        {
+        try {
             inputBoardSecondStrategy = objectMapper.readValue(inputStream, Board.class);
-        }
-        catch (final Exception e)
-        {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("input-board-third-strategy.json");
-        try
-        {
+        try {
             inputBoardThirdStrategy = objectMapper.readValue(inputStream, Board.class);
-        }
-        catch (final Exception e)
-        {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("input-board-third-strategy.json");
-        try
-        {
+        try {
             expectedBoardSecondStrategy = objectMapper.readValue(inputStream, Board.class);
-        }
-        catch (final Exception e)
-        {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
 
         inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("third-strategy-row-one-iteration.json");
-        try
-        {
+        try {
             expectedBoardThirdStrategy = objectMapper.readValue(inputStream, Board.class);
-        }
-        catch (final Exception e)
-        {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
 
@@ -108,8 +82,7 @@ public class ProcessOfEliminationByRowStrategyTest
     }
 
     @Test
-    public void testRemovePossibilitiesMakesNoChange()
-    {
+    public void testRemovePossibilitiesMakesNoChange() {
         assertNotNull(inputBoardSecondStrategy);
 
         secondStrategy.solve(inputBoardSecondStrategy, characters);
@@ -117,8 +90,7 @@ public class ProcessOfEliminationByRowStrategyTest
     }
 
     @Test
-    public void testProcessOfEliminationStrategy_ok()
-    {
+    public void testProcessOfEliminationStrategy_ok() {
         assertNotNull(inputBoardThirdStrategy);
         assertNotNull(expectedBoardThirdStrategy);
 

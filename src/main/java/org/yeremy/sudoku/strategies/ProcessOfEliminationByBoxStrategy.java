@@ -1,6 +1,6 @@
 package org.yeremy.sudoku.strategies;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -15,9 +15,9 @@ import org.yeremy.sudoku.search.Search;
 @Singleton
 public class ProcessOfEliminationByBoxStrategy implements Strategy
 {
-    @Named("searchPossibility")
     @Inject
-    Search search;
+    @Named("searchPossibility")
+    private Search search;
 
     private Cell[][] matrix;
 
@@ -26,12 +26,10 @@ public class ProcessOfEliminationByBoxStrategy implements Strategy
     private boolean boardHasChanged = false;
 
     @Override
-    public void solve(Board board, List<String> characters)
+    public void solve(Board board, Set<String> characters)
     {
         matrix = board.getMatrix();
-
         n = matrix[0].length;
-
         board.setHasChanged(false);
 
         // Search all boxes
@@ -60,7 +58,7 @@ public class ProcessOfEliminationByBoxStrategy implements Strategy
         {
             for (int column = 0; column < n; column++)
             {
-                if (!matrix[row][column].getValue().equals("0"))
+                if (matrix[row][column].getValue() != null)
                 {
                     answerCount++;
                 }

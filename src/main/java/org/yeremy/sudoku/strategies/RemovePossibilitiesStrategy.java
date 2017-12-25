@@ -2,6 +2,7 @@ package org.yeremy.sudoku.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -23,21 +24,18 @@ public class RemovePossibilitiesStrategy implements Strategy
 {
     @Inject
     @Named("searchValue")
-    Search search;
+    private Search search;
 
     private Cell[][] matrix;
 
     private int n;
 
     @Override
-    public void solve(Board board, List<String> characters)
+    public void solve(Board board, Set<String> characters)
     {
         matrix = board.getMatrix();
-
         n = matrix[0].length;
-
         int answerCount = 0;
-
         board.setHasChanged(false);
 
         for (int row = 0; row < n; row++)
@@ -45,7 +43,7 @@ public class RemovePossibilitiesStrategy implements Strategy
             for (int column = 0; column < n; column++)
             {
                 // If solution has not already been found.
-                if (matrix[row][column].getValue().equals("0"))
+                if (matrix[row][column].getValue() == null)
                 {
                     final List<String> markedForDeletion = new ArrayList<>();
 

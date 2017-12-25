@@ -56,7 +56,8 @@ public class SearchValue implements Search
         {
             for (int j = boxLeftColumn; j <= boxRightColumn; j++)
             {
-                if (matrix[i][j].getValue().equals(character))
+                if (matrix[i][j].getValue() != null &&
+                        matrix[i][j].getValue().equals(character))
                 {
                     coordinate.setRow(i);
                     coordinate.setColumn(j);
@@ -73,7 +74,8 @@ public class SearchValue implements Search
     {
         for (int row = 0; row < n; row++)
         {
-            if (matrix[row][column].getValue().equals(character))
+            if (matrix[row][column].getValue() != null &&
+                    matrix[row][column].getValue().equals(character))
             {
                 return row;
             }
@@ -86,7 +88,8 @@ public class SearchValue implements Search
     {
         for (int column = 0; column < n; column++)
         {
-            if (matrix[row][column].getValue().equals(character))
+            if (matrix[row][column].getValue() != null &&
+                    matrix[row][column].getValue().equals(character))
             {
                 return column;
             }

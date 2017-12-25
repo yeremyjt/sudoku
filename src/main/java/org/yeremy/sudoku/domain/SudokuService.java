@@ -7,5 +7,7 @@ import org.yeremy.sudoku.dto.InputBoard;
 
 public interface SudokuService
 {
-    Board solve(InputBoard inputBoard, List<String> characters);
+    Board solveNineByNine(InputBoard inputBoard);
+
+    Board solveSixteenBySixteen(InputBoard inputBoard);
 }

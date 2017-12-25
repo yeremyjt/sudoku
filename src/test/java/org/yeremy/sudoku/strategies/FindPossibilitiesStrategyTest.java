@@ -5,7 +5,9 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -26,29 +28,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @ContextConfiguration(classes = TestConfig.class)
 public class FindPossibilitiesStrategyTest
 {
-
-    @Named("findPossibilitiesStrategy")
     @Inject
+    @Named("findPossibilitiesStrategy")
     private Strategy strategy;
 
     private static InputBoard inputBoard;
     private static Board board;
     private static Board expectedBoard;
 
-    private final List<String> characters = new ArrayList<String>()
-    {
-        {
-            add("1");
-            add("2");
-            add("3");
-            add("4");
-            add("5");
-            add("6");
-            add("7");
-            add("8");
-            add("9");
-        }
-    };
+    private final Set<String> characters = new HashSet<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
 
     private final int n = 9;
 
@@ -74,7 +62,12 @@ public class FindPossibilitiesStrategyTest
                 for (int j = 0; j < n; j++)
                 {
                     Cell cell = new Cell();
-                    cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    if (inputBoard.getMatrix()[i][j] != null) {
+                        cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    }
+                    else {
+                        cell.setValue(null);
+                    }
                     cell.setPossibilities(new ArrayList<String>());
                     matrix[i][j] = cell;
                 }

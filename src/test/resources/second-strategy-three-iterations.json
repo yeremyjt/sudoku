@@ -40,14 +40,14 @@
     ],
     [
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "3",
           "6"
         ]
       },
       {
-        "value": "0",
+        "value": null,
         "possibilities": [
           "3",
           "6"

@@ -46,7 +46,14 @@ public class SearchValueTest
                 for (int j = 0; j < n; j++)
                 {
                     Cell cell = new Cell();
-                    cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    if (inputBoard.getMatrix()[i][j] != null)
+                    {
+                        cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    }
+                    else
+                    {
+                        cell.setValue(null);
+                    }
                     cell.setPossibilities(new ArrayList<String>());
                     matrix[i][j] = cell;
                 }

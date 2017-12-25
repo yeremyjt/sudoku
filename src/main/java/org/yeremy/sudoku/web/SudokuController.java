@@ -1,4 +1,4 @@
-package org.yeremy.sudoku.controller;
+package org.yeremy.sudoku.web;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @RestController
-@RequestMapping("/")
+@RequestMapping("/solve")
 @Api(value = "/")
 public class SudokuController extends WebMvcConfigurerAdapter
 {
@@ -34,39 +34,24 @@ public class SudokuController extends WebMvcConfigurerAdapter
     private SudokuService sudokuService;
 
     @SuppressWarnings("serial")
-    @RequestMapping(value = "solve", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+    @RequestMapping(value = "nineByNine", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "inputBoard", value = "Sudoku Board", required = true, dataType = "InputBoard")
     })
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = Board.class),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
-            @ApiResponse(code = 404, message = "Not Found"),
-            @ApiResponse(code = 500, message = "Failure") })
     @ResponseBody
-    public Board solveSudoku(@RequestBody @ApiParam InputBoard inputBoard)
+    public Board solveNineByNine(@RequestBody @ApiParam InputBoard inputBoard)
     {
-        final List<String> characters = new ArrayList<String>()
-        {
-            {
-                add("1");
-                add("2");
-                add("3");
-                add("4");
-                add("5");
-                add("6");
-                add("7");
-                add("8");
-                add("9");
-            }
-        };
-        return sudokuService.solve(inputBoard, characters);
+        return sudokuService.solveNineByNine(inputBoard);
     }
 
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry)
+    @SuppressWarnings("serial")
+    @RequestMapping(value = "sixteenBySixteen", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "inputBoard", value = "Sudoku Board", required = true, dataType = "InputBoard")
+    })
+    @ResponseBody
+    public Board solveSixteenBySixteen(@RequestBody @ApiParam InputBoard inputBoard)
     {
-        registry.addViewController("/").setViewName("forward:/index.html");
+        return sudokuService.solveSixteenBySixteen(inputBoard);
     }
 }

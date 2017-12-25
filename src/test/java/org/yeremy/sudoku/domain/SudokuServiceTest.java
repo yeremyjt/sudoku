@@ -1,14 +1,6 @@
 package org.yeremy.sudoku.domain;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.inject.Inject;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +10,11 @@ import org.yeremy.sudoku.config.TestConfig;
 import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.InputBoard;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.inject.Inject;
+import java.io.InputStream;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
@@ -31,21 +27,6 @@ public class SudokuServiceTest
     private static InputBoard inputHardBoard;
     private static Board expectedEasyBoard;
     private static Board expectedHardBoard;
-
-    private final List<String> characters = new ArrayList<String>()
-    {
-        {
-            add("1");
-            add("2");
-            add("3");
-            add("4");
-            add("5");
-            add("6");
-            add("7");
-            add("8");
-            add("9");
-        }
-    };
 
     private final int n = 9;
 
@@ -105,7 +86,7 @@ public class SudokuServiceTest
         assertNotNull(inputEasyBoard);
         assertNotNull(expectedEasyBoard);
 
-        Board outputBoard = service.solve(inputEasyBoard, characters);
+        Board outputBoard = service.solveNineByNine(inputEasyBoard);
 
         assertEquals(expectedEasyBoard.getMatrix()[0][0], outputBoard.getMatrix()[0][0]);
         assertEquals(expectedEasyBoard.getMatrix()[0][1], outputBoard.getMatrix()[0][1]);
@@ -206,7 +187,7 @@ public class SudokuServiceTest
         assertNotNull(inputHardBoard);
         assertNotNull(expectedHardBoard);
 
-        Board outputBoard = service.solve(inputHardBoard, characters);
+        Board outputBoard = service.solveNineByNine(inputHardBoard);
 
         assertEquals(expectedHardBoard.getMatrix()[0][0], outputBoard.getMatrix()[0][0]);
         assertEquals(expectedHardBoard.getMatrix()[0][1], outputBoard.getMatrix()[0][1]);

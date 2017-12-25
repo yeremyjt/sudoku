@@ -2,6 +2,7 @@ package org.yeremy.sudoku.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -21,24 +22,20 @@ import org.yeremy.sudoku.search.Search;
 @Singleton
 public class FindPossibilitiesStrategy implements Strategy
 {
-
     @Inject
     @Named("searchValue")
-    Search search;
+    private Search search;
 
     private Cell[][] matrix;
 
     private int n;
 
     @Override
-    public void solve(Board board, List<String> characters)
+    public void solve(Board board, Set<String> characters)
     {
         matrix = board.getMatrix();
-
         n = matrix[0].length;
-
         int answerCount = 0;
-
         board.setHasChanged(false);
 
         for (int row = 0; row < n; row++)
@@ -52,7 +49,7 @@ public class FindPossibilitiesStrategy implements Strategy
                 }
 
                 // If solution has not been found.
-                if (matrix[row][column].getValue().equals("0"))
+                if (matrix[row][column].getValue() == null)
                 {
                     final List<String> possibilities = new ArrayList<>();
 
