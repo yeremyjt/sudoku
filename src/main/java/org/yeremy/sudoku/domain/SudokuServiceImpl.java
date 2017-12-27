@@ -121,7 +121,7 @@ public class SudokuServiceImpl implements SudokuService
                 Cell cell = new Cell();
                 if (inputBoard.getMatrix()[i][j] != null)
                 {
-                    cell.setValue(String.valueOf(inputBoard.getMatrix()[i][j].intValue()));
+                    cell.setValue(inputBoard.getMatrix()[i][j]);
                 }
                 else
                 {

@@ -1,6 +1,7 @@
 package org.yeremy.sudoku.domain;
 
 import org.yeremy.sudoku.dto.InputBoard;
+import org.yeremy.sudoku.strategies.BoardType;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -27,6 +28,12 @@ public class ValidatorImpl implements Validator
             throw new IllegalArgumentException("The input board is empty");
         }
 
+        final int NINE_BY_NINE_SIZE = 9;
+        if (!isValidBoardSize(inputBoard, NINE_BY_NINE_SIZE))
+        {
+            throw new IllegalArgumentException("The input board is not a nine by nine board.");
+        }
+
         final String NUMBER_PATTERN = "[1-9]";
         pattern = Pattern.compile(NUMBER_PATTERN);
         int n = inputBoard.getMatrix()[0].length;
@@ -48,8 +55,18 @@ public class ValidatorImpl implements Validator
         }
     }
 
+    private boolean isValidBoardSize(InputBoard inputBoard, int size)
+    {
+        if (inputBoard.getMatrix().length != size) return false;
+        for (int i = 0; i < size; i++) {
+            if (inputBoard.getMatrix()[i].length != size) return false;
+        }
+
+        return true;
+    }
+
     @Override
-    public void validateSixteenBySixteen(InputBoard inputBoard)
+    public void validateSixteenBySixteenBoard(InputBoard inputBoard)
     {
         if (inputBoard == null)
         {
@@ -61,7 +78,13 @@ public class ValidatorImpl implements Validator
             throw new IllegalArgumentException("The input board is empty");
         }
 
-        final String ALPHANUMERIC_PATTERN = "[1-9A-Za-z]";
+        final int SIXTEEN_BY_SIXTEEN_SIZE = 16;
+        if (!isValidBoardSize(inputBoard, SIXTEEN_BY_SIXTEEN_SIZE))
+        {
+            throw new IllegalArgumentException("The input board is not a sixteen by sixteen board.");
+        }
+
+        final String ALPHANUMERIC_PATTERN = "[1-9A-Z]";
         pattern = Pattern.compile(ALPHANUMERIC_PATTERN);
         int n = inputBoard.getMatrix()[0].length;
 

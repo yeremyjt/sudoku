@@ -6,5 +6,5 @@ public interface Validator
 {
     void validateNineByNineBoard(InputBoard inputBoard);
 
-    void validateSixteenBySixteen(InputBoard inputBoard);
+    void validateSixteenBySixteenBoard(InputBoard inputBoard);
 }

@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputBoard
 {
     @JsonProperty("matrix")
-    private Integer[][] matrix;
+    private String[][] matrix;
 
-    public Integer[][] getMatrix()
+    public String[][] getMatrix()
     {
         return matrix;
     }
 
-    public void setMatrix(Integer[][] matrix)
+    public void setMatrix(String[][] matrix)
     {
         this.matrix = matrix;
     }
