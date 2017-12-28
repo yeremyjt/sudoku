@@ -1,4 +1,6 @@
-package org.yeremy.sudoku.strategies;
+package org.yeremy.sudoku.domain;
+
+import org.yeremy.sudoku.strategies.BoardType;
 
 import java.util.Set;
 

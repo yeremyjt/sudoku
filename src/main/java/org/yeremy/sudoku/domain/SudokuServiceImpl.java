@@ -4,7 +4,6 @@ import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.dto.InputBoard;
 import org.yeremy.sudoku.strategies.BoardType;
-import org.yeremy.sudoku.strategies.CharactersCreator;
 import org.yeremy.sudoku.strategies.Strategy;
 
 import javax.inject.Inject;

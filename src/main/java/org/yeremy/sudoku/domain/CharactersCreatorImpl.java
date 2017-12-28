@@ -1,4 +1,7 @@
-package org.yeremy.sudoku.strategies;
+package org.yeremy.sudoku.domain;
+
+import org.yeremy.sudoku.domain.CharactersCreator;
+import org.yeremy.sudoku.strategies.BoardType;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
