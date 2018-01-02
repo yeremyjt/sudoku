@@ -13,7 +13,7 @@ import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.search.Search;
 
 /**
- * This is the first strategy. It cycles through the sudoku board and markes all the possible solutions for each cell in
+ * This is the first strategy. It cycles through the sudoku board and marks all the possible solutions for each cell in
  * the board. This strategy must run before the other two. This is the first strategy.
  *
  * @author yeremy
@@ -26,13 +26,11 @@ public class FindPossibilitiesStrategy implements Strategy
     @Named("searchValue")
     private Search search;
 
-    private Cell[][] matrix;
-
-    private int n;
-
     @Override
     public void solve(Board board, Set<String> characters)
     {
+        Cell[][] matrix;
+        int n;
         matrix = board.getMatrix();
         n = matrix[0].length;
         int answerCount = 0;

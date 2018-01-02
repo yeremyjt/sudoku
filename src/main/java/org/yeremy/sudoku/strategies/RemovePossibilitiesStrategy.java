@@ -26,13 +26,11 @@ public class RemovePossibilitiesStrategy implements Strategy
     @Named("searchValue")
     private Search search;
 
-    private Cell[][] matrix;
-
-    private int n;
-
     @Override
     public void solve(Board board, Set<String> characters)
     {
+        Cell[][] matrix;
+        int n;
         matrix = board.getMatrix();
         n = matrix[0].length;
         int answerCount = 0;
@@ -86,5 +84,4 @@ public class RemovePossibilitiesStrategy implements Strategy
             board.setSolved(true);
         }
     }
-
 }

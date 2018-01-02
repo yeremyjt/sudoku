@@ -21,7 +21,7 @@ public class SpringConfiguration
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                .pathMapping("/solve")
+                .pathMapping("/")
                 .apiInfo(apiInfo());
     }
 

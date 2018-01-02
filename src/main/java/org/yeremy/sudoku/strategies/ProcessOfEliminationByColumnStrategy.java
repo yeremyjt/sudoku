@@ -10,6 +10,12 @@ import org.yeremy.sudoku.dto.Board;
 import org.yeremy.sudoku.dto.Cell;
 import org.yeremy.sudoku.search.Search;
 
+/***
+ * This is the third strategy. It uses process of elimination to find solutions to cells. For example, if a row only
+ * has one cell with a possibility of 5,that is the solution for that cell. The same applies for a column and a box.
+ *
+ * @author yeremy
+ */
 @Named("processOfEliminationByColumnStrategy")
 @Singleton
 public class ProcessOfEliminationByColumnStrategy implements Strategy
@@ -18,15 +24,12 @@ public class ProcessOfEliminationByColumnStrategy implements Strategy
     @Named("searchPossibility")
     private Search search;
 
-    private Cell[][] matrix;
-
-    private int n;
-
-    private boolean boardHasChanged = false;
-
     @Override
     public void solve(Board board, Set<String> characters)
     {
+        Cell[][] matrix;
+        int n;
+        boolean boardHasChanged = false;
         matrix = board.getMatrix();
         n = matrix[0].length;
         board.setHasChanged(false);
