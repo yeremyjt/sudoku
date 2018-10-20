@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/yeremyjt/sudoku.svg?branch=master)](https://travis-ci.org/yeremyjt/sudoku)
+
 # sudoku
+
 Sudoku solver service.
 
 ## Run Java Service
